@@ -1,0 +1,5 @@
+export default function HowToBuyContainer(props) {
+    return(
+        <section class="howToBuyContainer"><div class="container"><h1 class="big">كيف تشتري سيارتك من <br/>سيارة اونلاين؟ </h1><div class="toggleImagesContainer"><ul styles="transform: translate(0px, 0px);"><li class="readMe activeHow"><strong>1</strong><span>إبحث عن السيارة اللي تبيها</span><img class="m-show" src="https://syarahcdn.syarah.com/syarah/bundles/h1.png" alt=""/></li><li><strong>2</strong><span>إحجزها بـ 500 ريال مباشرة</span><img class="m-show" src="https://syarahcdn.syarah.com/syarah/bundles/h2.png" alt=""/></li><li><strong>3</strong><span>نبدأ بتسجيل وتأمين سيارتك</span><img class="m-show" src="https://syarahcdn.syarah.com/syarah/bundles/h3.png" alt=""/></li><li><strong>4</strong><span>توصيل سيارتك لين عندك</span><img class="m-show" src="https://syarahcdn.syarah.com/syarah/bundles/h4.png" alt=""/></li></ul><div><img src="https://syarahcdn.syarah.com/syarah/bundles/h1.png" alt=""/></div></div></div></section>
+    )
+}

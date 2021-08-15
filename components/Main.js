@@ -12,7 +12,7 @@ import SideMenu from "./SideMenu"
 
 export default function Body(props) {
     return(
-              <main class="">
+            <main class="">
                 {/* <SideMenu/> */}
                 <Container1/>
                 {/* <Container2/> */}
@@ -22,8 +22,8 @@ export default function Body(props) {
                 <OurServices/>
                 <HowToBuyContainer/>
                 <SearchByMakeContainer/>
-                <CarShapeContainer/>
+                {/* <CarShapeContainer/> */}
                 <AnyQustContainer/>
-</main>
+            </main>
     )
 }

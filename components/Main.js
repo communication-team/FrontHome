@@ -15,7 +15,7 @@ export default function Body(props) {
               <main class="">
                 {/* <SideMenu/> */}
                 <Container1/>
-                <Container2/>
+                {/* <Container2/> */}
                 <DisCountUsed/>
                 <DisCountNew/>
                 <WhyBuy/>

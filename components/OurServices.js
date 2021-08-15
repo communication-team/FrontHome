@@ -1,5 +1,5 @@
 import Image from "next/dist/client/image"
-import Used_Car from '../public/assest/images/Used-Car.png'
+import Used_Car from '../public/assets/images/Used-Car.png'
 <Image src={Used_Car} alt="Used_Car" />
 
 

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import audi_Container1 from '../public/assest/images/audi_Container1.png'
+import audi_Container1 from '../public/assets/images/audi_Container1.png'
 
 export default function Container1(props){
     return(

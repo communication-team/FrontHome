@@ -11,7 +11,7 @@ export default function HeaderUsed (props) {
                 <span class="SearchHEader">
                     <a href="/">
                         <img src="https://syarahcdn.syarah.com/syarah/bundles/logo.svg" alt="" />
-                        {/* <Image styles={{width:50 }} src={logo1} alt="logo" /> */}
+                        {/* <Image className="logoDim" src={logo1} alt="logo" /> */}
                     </a>
                 </span>
           <ul>

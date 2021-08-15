@@ -22,6 +22,11 @@ export default function Header (props) {
                         <a>سيارات مستعملة </a>
                         </Link>
                     </li>
+                    <li>
+                        <Link href="/detail_car">
+                        <a>link test detail </a>
+                        </Link>
+                    </li>
                     <li class="sellCarNewBtn hideBtn"><a href="/post/add-post" class="redBtn">اعرض سيارتك للبيع</a></li>
                     <li><span class="sideMenuToggle "><img src="https://syarahcdn.syarah.com/syarah/bundles/menuToggle.svg" alt="" /></span>
                     </li>

@@ -2,7 +2,7 @@ import Link from 'next/link'
 // import Image from 'next/image'
 import Image from "next/dist/client/image"
 
-import logo1 from '/public/assest/images/logo1.png'
+// import logo1 from '../public/assets/images/logo1.png'
 
 export default function HeaderUsed (props) {
     return(

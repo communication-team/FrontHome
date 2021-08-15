@@ -1,11 +1,8 @@
 import Image from "next/dist/client/image"
-<<<<<<< HEAD
+
 import Used_Car from '../public/assets/images/Used-Car.png'
 <Image src={Used_Car} alt="Used_Car" />
-=======
-import Used_Car from '../public/assest/images/Used-Car.png'
 
->>>>>>> 14c1df406c1623c7177cc1a842e41fc1d9690789
 
 
 export default function OurServices(props) {

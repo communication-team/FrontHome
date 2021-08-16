@@ -16,7 +16,7 @@ export default function HeaderUsed (props) {
                 </span>
           <ul>
             <li class="sellCarNewBtn hideBtn">
-                <a href="/post/add-post" class="redBtn">اعرض سيارتك للبيع</a>
+                <a href="/create_post" class="redBtn">اعرض سيارتك للبيع</a>
             </li>
             <li>
                 <span class="sideMenuToggle ">

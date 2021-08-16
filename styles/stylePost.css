@@ -1,0 +1,385 @@
+
+    .sellCarContainer {
+        background-color: #eff2f5;
+        padding: 70px 0;
+    }
+
+    .sellCarContainer>div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1500px;
+    }
+
+    .sellCarContainer>div>div:last-child>img {
+        width: 100%;
+    }
+
+    .sellCarContainer>div>div {
+        width: 50%;
+    }
+
+    .rightSideSellCar>h1 {
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 64px;
+        color: #484848;
+    }
+
+    .rightSideSellCar>p {
+        color: #484848;
+        font-size: 22px;
+        line-height: 32px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .btnsContQ>a {
+        background-color: #ec6234;
+        background-color: #ed4f25;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        max-width: 286px;
+        height: 56px;
+        background-repeat: no-repeat;
+        color: #ffffff;
+        line-height: 50px;
+        padding: 10px 30px;
+        box-sizing: border-box;
+        border: solid 1px;
+    }
+
+    .btnsContQ {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .btnsContQ>a:last-child:not(.redBtn),.redBtn {
+        margin: 0 15px;
+        background-color: transparent;
+        background-repeat:no-repeat;
+        overflow: hidden;
+        outline:none;
+        color: #ec6234 !important;
+        border-color: #ec6234;
+    }
+    .redBtn{
+        color:#ffffff !important
+    }
+
+    .why_sell,
+    .how_sell {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 80px;
+    }
+
+    .why_sell>h2,
+    .how_sell>h2 {
+        color: #484848;
+        font-size: 36px;
+        line-height: 54px;
+        font-weight: bold;
+        margin: 60px 0;
+    }
+
+    .flexSell {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .cardSell {
+        width: calc(100% - 140px/2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .cardSell>img {
+        margin-bottom: 40px;
+    }
+
+    .cardSell>p {
+        color: #484848;
+        font-size: 20px;
+        line-height: 37px;
+        text-align: center;
+        /* padding: 0 40px; */
+    }
+
+    .why_sell.container {
+        max-width: 1300px;
+    }
+
+    .orangeBtnQ {
+        background-color: #ff8d00;
+        padding: 15px 30px;
+        border-radius: 4px;
+        font-weight: bold;
+        color: #ffffff !important;
+        box-sizing: border-box;
+    }
+
+    .howSellContainer>div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .howSellContainer>div:last-child {
+        flex-direction: row-reverse;
+    }
+
+    .howSellContainer>div>img {
+        width: 260px;
+    }
+
+    .howSellContainer>div>div {
+        width: calc(100% - 260px - 40px);
+    }
+
+    .howSellContainer>div>div>strong {
+        font-weight: bold;
+        color: #484848;
+        font-size: 28px;
+        line-height: 42px;
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    .howSellContainer>div>div>p {
+        color: #484848;
+        font-size: 24px;
+        line-height: 45px;
+        max-width: 700px;
+    }
+
+    .howSellContainer {
+        margin-bottom: 60px;
+    }
+
+    .appContainer {
+        max-width: 1168px;
+        position: relative;
+        margin: 0 auto;
+        background-image: url(/images/responsive/upload_app.png);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .appContainer>img {
+        width: 27.141%;
+        margin-top: -53px;
+    }
+
+    .app_options {
+        position: relative;
+        top: -30px;
+    }
+
+    .app_options>strong {
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 48px;
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    .app_options>p {
+        color: #ffffff;
+        font-size: 14px;
+        line-height: 21px;
+        margin-bottom: 20px;
+    }
+
+    .number {
+        display: flex;
+        border-radius: 4px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        width: fit-content;
+    }
+
+    .number>input,
+    .number>small {
+        background-color: #ffffff;
+        border: none;
+        outline: none !important;
+        padding: 10px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+    }
+
+    .number>button {
+        background-color: #ff8d00;
+        padding: 0 25px;
+        border-radius: 4px;
+        font-weight: bold;
+        color: #ffffff !important;
+        box-sizing: border-box;
+        border: none;
+        border-radius: 0;
+    }
+
+    .number>small {
+        border-right: solid 1px #A6AFB8;
+    }
+
+    @media screen and (min-width: 1025px) {
+        .m-show {
+            display: none !important
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        .rightSideSellCar>h1 {
+            font-size: 20px;
+            line-height: 37px;
+            text-align: center;
+        }
+
+        .sellCarContainer>div {
+            flex-wrap: wrap;
+            flex-direction: column-revers;
+        }
+
+        .sellCarContainer>div>div:last-child>img {
+            margin-top: 40px;
+        }
+
+        .sellCarContainer>div>div {
+            width: 100%;
+        }
+
+        .btnsContQ {
+            flex-direction: column;
+        }
+
+        .btnsContQ>a {
+            width: 100%;
+        }
+
+        .btnsContQ>a+a {
+            margin-top: 20px !important;
+        }
+
+        .sellCarContainer {
+            background-color: #eff2f5;
+            padding: 30px 0;
+        }
+
+        .flexSell,
+        .howSellContainer>div {
+            flex-direction: column !important;
+        }
+
+        .cardSell>img {
+            margin-bottom: 20px;
+        }
+
+        .cardSell>p {
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+        .cardSell+.cardSell,
+        .flexSell,
+        .howSellContainer>div+div {
+            margin-top: 40px;
+        }
+
+        .why_sell>h2,
+        .how_sell>h2 {
+            font-size: 20px;
+            line-height: 37px;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .howSellContainer>div>img {
+            width: 34%;
+        }
+
+        .why_sell,
+        .how_sell {
+            margin-bottom: 0;
+        }
+
+        .howSellContainer>div>div {
+            width: 100%;
+        }
+
+        .howSellContainer>div>div>strong {
+            text-align: center;
+            font-size: 18px;
+            line-height: 40px;
+        }
+
+        .howSellContainer>div>div>p {
+            font-size: 16px;
+            text-align: center;
+            line-height: 21px;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .appContainer>img {
+            display: none
+        }
+
+        .appContainer {
+            background-size: cover;
+            background-position: center;
+        }
+
+        .app_options {
+            top: 0;
+            box-sizing: border-box;
+            padding: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 50px;
+        }
+
+        .app_options>strong {
+            font-size: 18px;
+            line-height: 24px;
+            text-align: center;
+        }
+
+        .app_options>p,
+        .rightSideSellCar>p {
+            text-align: center;
+        }
+
+        .number {
+            width: 90%;
+        }
+
+        .number>input {
+            width: 115px;
+        }
+
+        .btnsContQ.m-show {
+            margin-bottom: 40px;
+        }
+    }
+

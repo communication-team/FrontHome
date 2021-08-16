@@ -8,6 +8,7 @@ export default function Home() {
     <div>
       <Head2/>
       <Body/>
+      
     </div>
   )
 }

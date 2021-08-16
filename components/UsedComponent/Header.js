@@ -10,7 +10,7 @@ export default function HeaderUsed (props) {
             <div class="container innerHdr">
                 <span class="SearchHEader">
                     <a href="/">
-                        <img src="https://syarahcdn.syarah.com/syarah/bundles/logo.svg" alt="" />
+                        {/* <img src="https://syarahcdn.syarah.com/syarah/bundles/logo.svg" alt="" /> */}
                         {/* <Image styles={{width:50 }} src={logo1} alt="logo" /> */}
                     </a>
                 </span>

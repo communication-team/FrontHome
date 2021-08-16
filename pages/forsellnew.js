@@ -45,7 +45,7 @@ export default function ForSellNew() {
                         <a  style={{color:'rgb(100, 0, 255)'}}>سيارات مستعملة </a>
                         </Link>
                     </li>
-                    <li  class="sellCarNewBtn hideBtn"><a href="/post/add-post" class="redBtn">اعرض سيارتك للبيع</a></li>
+                    <li  class="sellCarNewBtn hideBtn"><a href="/create_post" class="redBtn">اعرض سيارتك للبيع</a></li>
                     <li style={{paddingRight:'2%'}}><span class="sideMenuToggle "><img src="https://syarahcdn.syarah.com/syarah/bundles/menuToggle.svg" alt="" /></span>
                     </li>
                     </ul>

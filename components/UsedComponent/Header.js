@@ -10,13 +10,15 @@ export default function HeaderUsed (props) {
             <div class="container innerHdr">
                 <span class="SearchHEader">
                     <a href="/">
+
                         {/* <img src="https://syarahcdn.syarah.com/syarah/bundles/logo.svg" alt="" /> */}
                         {/* <Image styles={{width:50 }} src={logo1} alt="logo" /> */}
+
                     </a>
                 </span>
           <ul>
             <li class="sellCarNewBtn hideBtn">
-                <a href="/post/add-post" class="redBtn">اعرض سيارتك للبيع</a>
+                <a href="/create_post" class="redBtn">اعرض سيارتك للبيع</a>
             </li>
             <li>
                 <span class="sideMenuToggle ">

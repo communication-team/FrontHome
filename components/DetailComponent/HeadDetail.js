@@ -54,15 +54,16 @@ export default function HeadDeatil(props){
     }
     function script5(){
       if (typeof window !== "undefined"){
-      (function(i, s, o, g, r, a, m, n) {
-        i.moengage_object = r;
-        t = {};
-        q = function(f) {
+        (function(i, s, o, g, r, a, m, n) {
+          i.moengage_object = r;
+           t = {};
+           q = function(f) {
           return function() {
             (i.moengage_q = i.moengage_q || []).push({ f: f, a: arguments });
           };
         };
-        (f = [
+        (
+          f = [
           'track_event',
           'add_user_attribute',
           'add_first_name',
@@ -172,7 +173,7 @@ export default function HeadDeatil(props){
   {script4()}   
 </script>
 <script>
-  {script5()}
+  {/* {script5()} */}
 </script>
 
 <script>

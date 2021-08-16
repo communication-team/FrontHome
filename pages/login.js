@@ -1,6 +1,43 @@
 import Header from "../components/Header"
 // import 'assets/css/login.css'
+import react, { useState, useEffect } from 'react'
 export default function Login() {
+
+    const [loginuser, setLoginuser] = useState([]);
+    const [loginpassword, setLoginpassword] = useState([]);
+    const [singuser, setSinguser] = useState([]);
+    const [password, setPassword] = useState([]);
+    const [copass, setCopass] = useState([]);
+    const [email, setemail] = useState([]);
+
+ 
+    
+  
+  
+    async function  getData()
+    {
+       
+     
+    
+         const res= await axios.get('https://carsgallary.herokuapp.com/api/v1/cars/carinfo/'+router.query.post)        
+       
+        .then( function (response) {
+            // handle success
+            console.log('fff',response);
+          
+            setInfo(response.data)
+        })
+        .catch(function (error) {
+            // handle error
+            console.log('ffff',error);
+           
+        })
+        .then(function () {
+            // always executed
+        });
+    }
+
+
     return (
         <div>
          

@@ -763,9 +763,9 @@ function toggaleImage(data)
                             post.map((items)=>
                             {
 return (
-    <Link href="/">
+    <Link  href={{ pathname: '/detail_car', query: { post: items.id_info } }}>
     
-
+    {/* href={'/detail_car?'+items.id_info} */}
 <a class="singleCarThumbS " styles="padding-bottom:"
                             href="/car/10490952?sol=0">
                             <div>

@@ -1,19 +1,34 @@
 import ColumnContainerDetail from '../DetailComponent/LeftDetail'
 // components/DetailComponent/LeftDetail.js
 import React from "react"
+import react, { useState, useEffect } from 'react'
 export default function CarCard(props){
+
+    const [gg, setGg] = useState([]);
+
+
+    function changeImage(event)
+    {
+        alert()
+        console.log(event.target)
+        
+    }
     return(
         <React.Fragment>
-        <div>
-            <div styles="display:none" className="swipeImageMM">
-            </div>
+
+            
+        <div >
+            
+
+
+            
             <section className="PVSliderSection">
             <div className="mainSliderConatinerCC ">
                 <div className="bigImgCC">
                 <div className="innerCCBI">
                     <div className="TumbLoadImage-module__animatedBackground___wYC5z">
                     </div>
-                    <img className="TumbLoadImage-module__loading___3EJWH " src="https://syarahcdn.syarah.com/online/posts/77614/0x300/orignal-1625323939-648.jpg" alt="" />
+                    <img className="" src={props.info.primary_image} alt="" />
                     <div className="imageCameraIIIg">
                     </div>
                 </div>
@@ -22,9 +37,9 @@ export default function CarCard(props){
                     <span>من</span>
                     <span>23</span>
                 </div>
-                <span className="rightShiftCC">
+                <span className="rightShiftCC" id="prv" onClick={changeImage}>
                 </span>
-                <span className="leftShiftCC">
+                <span className="leftShiftCC" id="nex" onClick={changeImage}>
                 </span>
                 </div>
                 <div className="allThumbContainer">
@@ -153,38 +168,32 @@ export default function CarCard(props){
         <section className="carInfoCC"><h2><span>تفاصيل السيارة</span></h2><div className="carDetailesCC">
                     <div>
                         <img src="https://syarahcdn.syarah.com/syarah/bundles/Key.svg" alt="" />
-                        <label>الماركة:</label><strong>هونداي</strong>
+                        <label>الماركة:</label><strong>{props.info.carModel}</strong>
+                    </div>
+                    
+                    <div><img src="https://syarahcdn.syarah.com/syarah/bundles/Extention.svg" alt="" /><label>الفئة:</label><strong>{props.info.brand}</strong>
                     </div>
                     <div>
-                        <img src="https://syarahcdn.syarah.com/syarah/bundles/Type.svg" alt="" /><label>النوع:</label><strong>اكسنت</strong>
+                        <img src="https://syarahcdn.syarah.com/syarah/bundles/Model.svg" alt="" /><label>الموديل:</label><strong>{props.info.year}</strong>
                     </div>
-                    <div><img src="https://syarahcdn.syarah.com/syarah/bundles/Extention.svg" alt="" /><label>الفئة:</label><strong>GL</strong>
-                    </div>
+                   
                     <div>
-                        <img src="https://syarahcdn.syarah.com/syarah/bundles/Model.svg" alt="" /><label>الموديل:</label><strong>2020</strong>
+                        <img src="https://syarahcdn.syarah.com/syarah/bundles/Color.svg" alt="" /><label>اللون:</label><strong>{props.info.color}</strong>
                     </div>
-                    <div>
-                        <img src="https://syarahcdn.syarah.com/syarah/bundles/to.svg" alt="" /><label>الوارد:</label><strong>سعودي</strong>
-                    </div>
-                    <div>
-                        <img src="https://syarahcdn.syarah.com/syarah/bundles/Color.svg" alt="" /><label>اللون:</label><strong>أبيض</strong><span className="colorCC" styles="background-color:#FFFFFF;border-color:#FFFFFF"></span>
-                    </div>
-                    <div>
-                        <img src="https://syarahcdn.syarah.com/syarah/bundles/Specs.svg" alt="" /><label>المواصفات:</label><strong>ستاندر</strong>
+                  
+                        <div><img src="https://syarahcdn.syarah.com/syarah/bundles/fuel.svg" alt="" /><label>نوع الوقود:</label><strong>{props.info.fuel}</strong>
                         </div>
-                        <div><img src="https://syarahcdn.syarah.com/syarah/bundles/fuel.svg" alt="" /><label>نوع الوقود:</label><strong>بنزين</strong>
+                        <div><img src="https://syarahcdn.syarah.com/syarah/bundles/Gear.svg" alt="" /><label>نوع القير:</label><strong>{props.info.transmission}</strong>
                         </div>
-                        <div><img src="https://syarahcdn.syarah.com/syarah/bundles/Gear.svg" alt="" /><label>نوع القير:</label><strong>اوتوماتيك</strong>
-                        </div>
-                        <div><img src="https://syarahcdn.syarah.com/syarah/bundles/Cylinder.svg" alt="" /><label>عدد السلندرات:</label><strong>4</strong>
+                        <div><img src="https://syarahcdn.syarah.com/syarah/bundles/Cylinder.svg" alt="" /><label>عدد السلندرات:</label><strong>{props.info.cylinder}</strong>
                         </div>
                         <div>
-                            <img src="https://syarahcdn.syarah.com/syarah/bundles/engine_size.svg" alt="" /><label>حجم المحرك:</label><strong>1.4</strong>
+                            <img src="https://syarahcdn.syarah.com/syarah/bundles/engine_size.svg" alt="" /><label>حجم المحرك:</label><strong>{props.info.engine_size}</strong>
                         </div>
-                        <div><img src="https://syarahcdn.syarah.com/syarah/bundles/car book.svg" alt="" /><label>الحالة:</label><strong> مستعملة </strong>
+                        <div><img src="https://syarahcdn.syarah.com/syarah/bundles/car book.svg" alt="" /><label>الحالة:</label><strong> {props.info.status} </strong>
                         </div>
                         <div>
-                            <img src="https://syarahcdn.syarah.com/syarah/bundles/meter.svg" alt="" /><label>الممشى:</label><strong>88831 كم</strong>
+                            <img src="https://syarahcdn.syarah.com/syarah/bundles/meter.svg" alt="" /><label>الممشى:</label><strong>{props.info.km} كم</strong>
                         </div>
                     </div>
                 <div>
@@ -192,7 +201,7 @@ export default function CarCard(props){
         </section>
     </div>
   
-    <ColumnContainerDetail/>
+    <ColumnContainerDetail info={props.info}/>
     </React.Fragment>
     )
 }

@@ -4,13 +4,13 @@ import audi_Container1 from '../public/assets/images/audi_Container1.png'
 export default function Container1(props){
     return(
         <section class="section1 ">
-            <div class="container">
+            <div class="container" style={{lineHeight:'3rem'}}>
                 <div class="section1Content">
                     <h1>
-                        <span>اشتري سيارتك  </span>
-                        <br />
+                        <span >اشتري سيارتك  </span>
+                        {/* <br /> */}
                         <span>من </span>
-                        <br />
+                        {/* <br /> */}
                         <strong>سيارتك</strong>
                     </h1>
                     <p>جديد أو مستعمل</p>

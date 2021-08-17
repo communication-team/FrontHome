@@ -788,7 +788,7 @@ return (
                             backgroundColor: 'transparent',
                             fontSize: 'revert',
                             right: '49%',
-                            top:'48%'}}>ناسف لعدم وجود نتائج مطابقه لخيرات البحث ! </h1>}
+                            top:'48%'}}>ناسف لعدم وجود نتائج مطابقه لخيارات البحث ! </h1>}
 
                         
                         {/*

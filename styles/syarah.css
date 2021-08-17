@@ -2,11 +2,11 @@
 /* CSS Document */
 
 /*general bootstrap*/
-html{font-family:tahoma, sans-serif; -ms-text-size-adjust:100%;-webkit-text-size-adjust:100%; -webkit-tap-highlight-color:rgba(0,0,0,0)}
+html{font-family: 'Changa', sans-serif;; -ms-text-size-adjust:100%;-webkit-text-size-adjust:100%; -webkit-tap-highlight-color:rgba(0,0,0,0)}
 body{background: #ffffff; margin:0; padding:0; font-size:14px; line-height:1.42857143; color:#272b33; position:relative; }
 a:link{ color:#0049b0; outline:0; text-decoration:none;}
 a:hover,a:visited{ color:#2d3e50; outline:0; text-decoration:none;}
-h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-family:tahoma;font-weight:500;line-height:1.1;color:#272b33; font-size:65%}
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-family: 'Changa', sans-serif;font-weight:500;line-height:1.1;color:#272b33; font-size:65%}
 h1{font-size:1.5em; margin:0 0}
 h2{font-size:18px}
 h3{font-size:24px}
@@ -23,7 +23,7 @@ img{vertical-align:middle}
 svg:not(:root){overflow:hidden}
 input, select, textarea{ -webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px; border:1px solid #7e8c8d; padding:0 5px }
 textarea{ resize:vertical;}
-button, a.btn{ background:#0049b0; cursor:pointer; display:block; border:none; padding:10px 0px; color:#fff; -webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px; font-family:tahoma; text-align:center; font-size:16px;}
+button, a.btn{ background:#0049b0; cursor:pointer; display:block; border:none; padding:10px 0px; color:#fff; -webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px; font-family: 'Changa', sans-serif; text-align:center; font-size:16px;}
 button:hover, a.btn:hover{ background:#0049b0; color:#fff; }
 a.btn span{ font-weight:700; ; display:inline-block; font-size:1em; }
 
@@ -179,13 +179,13 @@ button.view_list_list, button.view_list_grid, button.view_list_list_active, butt
 }
 
 input, button, select, textarea {
-    font-family: Arial;
+    font-family: 'Changa', sans-serif;
 }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: Arial;
+    font-family: 'Changa', sans-serif;
 }
 body {
-    font-family: Arial;
+    font-family: 'Changa', sans-serif;
 }
 
 

@@ -3,14 +3,14 @@ import Logo from '../public/assets/images/sayartakLogo-removebg-preview.png'
 import Image from 'next/image'
 export default function Header (props) {
     return(
-        <header class="siteHeader " style={{margin:"0", width:"100%"}}>
+        <header class="siteHeader " style={{margin:"0"}}>
             <div class="container innerHdr">
                {/* <span><a href="/" ><img src="https://syarahcdn.syarah.com/syarah/bundles/logo.svg" alt="" /></a></span> */}
-               <span><a href="/" >
-                   {/* <img src="https://syarahcdn.syarah.com/syarah/bundles/logo.svg" alt="" /> */}
-                   {/* <Image style={{width: '74px' ,height: '31px' }}  src={Logo} alt="audi_Container1" /> */}
-
-                </a></span>
+               <span>
+                   <a href="/" >
+                   <img style={{width:'80px'}} src="https://firebasestorage.googleapis.com/v0/b/cars-8ba21.appspot.com/o/sayartakLogo.PNG?alt=media&token=82f9304a-2846-48c4-a791-3edaefc825f8" alt="" />
+                   {/* <Image id='imageLogo'  src={Logo} alt="audi_Container1" /> */}
+                    </a></span>
                 {/* for logo  */}
                 <ul>
                     <li>

@@ -332,7 +332,7 @@ export default function Login() {
 
             </head>
                 <body>
-                    <div style={{background:"black"}} class="container-fluid header" style={{ marginTop: '3%' }} >
+                    <div  class="container-fluid header" style={{ marginTop: '3%' }} >
                         <div class="container">
 
                             <div   class="content" style={{ display: "flex", flexDirection: "row", justifyContent: 'space-evenly' }}>

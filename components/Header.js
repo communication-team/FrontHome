@@ -4,8 +4,10 @@ export default function Header (props) {
     return(
         <header class="siteHeader ">
             <div class="container innerHdr">
-               <span><a href="/"><img src="logo.png" alt="" /></a></span>
+               <span><a href="/"><img src="syartak.jpg" alt="" /></a></span>
                 {/* for logo  */}
+                <div style={{width: '170px', marginLeft:'655px'}}>
+                <img style={{height: '60px'}} src="../assets/images/syartak.jpg" alt=""/></div>
                 <ul>
                     <li>
                     <Link href="/">

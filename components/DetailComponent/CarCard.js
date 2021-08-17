@@ -4,13 +4,64 @@ import React from "react"
 import react, { useState, useEffect } from 'react'
 export default function CarCard(props){
 
-    const [gg, setGg] = useState([]);
+    const [images, setImages] = useState([
+        'https://i.pinimg.com/originals/f1/c7/d7/f1c7d757fb41c4eadd1b8796b5c225b4.jpg',
+'https://www.extremetech.com/wp-content/uploads/2019/12/SONATA-hero-option1-764A5360-edit.jpg',
+'https://ichef.bbci.co.uk/news/1024/branded_news/F0B2/production/_118681616_gettyimages-1199242135.jpg'
+
+    ]);
 
 
     function changeImage(event)
     {
-        alert()
-        console.log(event.target)
+
+       
+        if(event.target.id=='prv')
+        {
+            let image=document.getElementById('changeimages')
+            let number=parseInt(image.name)
+
+            
+            if(number>0 && number<images.length)
+            {
+                number=number-1
+                console.log(number)
+                image.src=images[number]
+                image.name=number
+                document.getElementById('number').innerHTML=number+1
+            }
+            else if (number==0)
+            {
+                console.log(number)
+                image.src=images[images.length-1]
+                image.name=images.length-1
+                document.getElementById('number').innerHTML=images.length
+            }
+           
+            
+            
+          
+        }else{
+            let image=document.getElementById('changeimages')
+            let number=parseInt(image.name)
+            if(number>=0 && number<images.length-1)
+            {
+                number=number+1
+                console.log(number)
+                image.src=images[number]
+                image.name=number
+                document.getElementById('number').innerHTML=number+1
+            }
+            else if (number==images.length-1)
+            {
+                console.log(number)
+                image.src=images[0]
+                image.name=0
+                document.getElementById('number').innerHTML=1
+            }
+           
+        }
+
         
     }
     return(
@@ -28,14 +79,14 @@ export default function CarCard(props){
                 <div className="innerCCBI">
                     <div className="TumbLoadImage-module__animatedBackground___wYC5z">
                     </div>
-                    <img className="" src={props.info.primary_image} alt="" />
+                    <img className="" id='changeimages' style={{    objectFit: 'cover'}} name="1" src={props.info.primary_image} alt="" />
                     <div className="imageCameraIIIg">
                     </div>
                 </div>
                 <div className="crntImgCC">
-                    <span>1</span>
+                    <span id="number">1</span>
                     <span>من</span>
-                    <span>23</span>
+                    <span>{images.length}</span>
                 </div>
                 <span className="rightShiftCC" id="prv" onClick={changeImage}>
                 </span>

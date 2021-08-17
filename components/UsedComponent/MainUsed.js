@@ -759,7 +759,7 @@ function toggaleImage(data)
                 <div class="searchResultContainer">
                    
                     <div class="allCarsResult rowLoad">
-                        {
+                        {post.length!=0?
                             post.map((items)=>
                             {
 return (
@@ -784,7 +784,11 @@ return (
                             </div>
                         </a></Link>)
                             })
-                        }
+                        :<h1 style={{position: 'absolute',
+                            backgroundColor: 'transparent',
+                            fontSize: 'revert',
+                            right: '49%',
+                            top:'48%'}}>ناسف لعدم وجود نتائج مطابقه لخيرات البحث ! </h1>}
 
                         
                         {/*

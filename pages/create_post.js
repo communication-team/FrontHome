@@ -7,7 +7,18 @@ export default function CreatePost() {
 
 
   
-   
+    useEffect(() => {
+
+       
+
+if(!window.localStorage.info)
+{
+    window.location='/login'
+}
+
+       
+       
+    }, [])
     
    
    
@@ -46,9 +57,9 @@ export default function CreatePost() {
         // }).then(response => {
         //     console.log((response.data))
         // })
-   
+   console.log("Bearer "+JSON.parse(window.localStorage.getItem('token')))
         var formData = new FormData();
-        const config = { headers: { 'Content-Type': 'multipart/form-data',  "Authorization": 'Bearer ' +  'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI5MTQxODgyLCJqdGkiOiI5ZDE3OGM0Y2ZjMTk0MTIzOGE2Mjc1OTMxNTJiZDk2YiIsInVzZXJfaWQiOjF9.8zGMPa2dEezsrPxq8e4Yh6bwldFJ9hI6_xYY8O_BLVc'  } };
+        const config = { headers: { 'Content-Type': 'multipart/form-data',  "Authorization": 'Bearer ' +JSON.parse(window.localStorage.getItem('token')) } };
 
         formData.append("brand", brand);
         formData.append("transmission", tra);
@@ -61,11 +72,11 @@ export default function CreatePost() {
         formData.append("price", price);
         formData.append("payment_type", pyment);
         formData.append("location", location);
-        formData.append("id_user_id", 1);
+        formData.append("id_user_id", JSON.parse(window.localStorage.getItem('info')).id);
         formData.append("title", title);
         formData.append("carModel", model);
         formData.append("phone", phone);
-        formData.append("user_name", "odai");
+        formData.append("user_name", JSON.parse(window.localStorage.getItem('info')).username);
         formData.append("primary_image", "https://cdn05.carsforsale.com/00edeb262c05e5e9b49da5f72446249dc2/480x360/2013-jeep-wrangler-unlimited-sport-4x4-4dr-suv.jpg");
         formData.append("approved", 'false');
         formData.append("year", year);
@@ -77,6 +88,7 @@ export default function CreatePost() {
         ).then(function (response) {
 
             console.log(response)
+            alert("dd")
 
         }).catch(function (error) {
             console.log(error)

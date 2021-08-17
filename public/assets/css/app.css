@@ -6,7 +6,7 @@
 html,
 body {
     min-height: 100%;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
     scroll-behavior: smooth;
 }
 
@@ -30,7 +30,7 @@ button,
     transition: .3s;
     border-radius: 10px;
     text-align: center;
-    font-size: 1rem;
+    /* font-size: 1rem; */
 }
 
 .btn-floating {
@@ -97,7 +97,7 @@ button:hover {
 #intro h1 {
     position: relative;
     color: #202020;
-    font-size: 72px;
+    /* font-size: 72px; */
     text-transform: uppercase;
     width: 100%;
     text-align: center;

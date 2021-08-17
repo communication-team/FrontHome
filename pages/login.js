@@ -3,6 +3,7 @@ import Head2 from "../components/Head2";
 // import 'assets/css/login.css'
 import react, { useState, useEffect } from 'react'
 import axios from 'axios'
+import Footer from '../components/Footer'
 export default function Login() {
 
     const [loginuser, setLoginuser] = useState([]);
@@ -322,25 +323,23 @@ export default function Login() {
     return (
         <div>
 
-            <Header />
-            <html lang="ar" dir="rtl" class=""><head>
+            <html lang="ar" dir="rtl" class="">
+            <Head2/>
 
-
-
-
-                {/* <link href="static/css/login.css" rel="stylesheet"/> */}
-                <link rel="stylesheet" href="../assets/css/app.css" />
-
-            </head>
                 <body>
-                    <div  class="container-fluid header" style={{ marginTop: '3%' }} >
+                    <div id='HeaderNeedSpace'>
+                    <Header />
+                    </div>
+                <link rel="stylesheet" href="../assets/css/app.css" />
+                {/* <link href="static/css/login.css" rel="stylesheet"/> */}
+                    <div  class="container-fluid" style={{ marginTop: '3%' }} >
                         <div class="container">
 
                             <div   class="content" style={{ display: "flex", flexDirection: "row", justifyContent: 'space-evenly' }}>
 
                                 {/* <div class="container" >
                                         <ul class="breadcrumb">
-                                        </ul>    </div> */}
+                                    </ul>    </div> */}
 
                                 <div style={{ width: '35%' }}>
                                     <div class="container" >
@@ -490,6 +489,10 @@ export default function Login() {
 
                         </div>
 
+                    </div>
+                    <div id='footerNeedPadding'>
+
+                    <Footer/>
                     </div>
                 </body>
             </html>

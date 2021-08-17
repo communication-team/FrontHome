@@ -6,3 +6,12 @@
 #footerNeedPadding {
     padding-bottom: 44px;
 }
+#HeaderNeedSpace{
+    width: 100%;
+}
+#HeaderNeedSpace a {
+    /* width: 100%; */
+    margin-left: 12px;
+    font-size: 16px;
+
+}

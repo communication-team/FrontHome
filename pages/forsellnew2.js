@@ -7,6 +7,7 @@ import MainUsed from '../components/UsedComponent/MainUsed'
 import AsideUsed from '../components/UsedComponent/AsideUsed'
 import RestUsedPage from '../components/UsedComponent/RestUsedPage'
 import BetweenHeadAndHeaders from '../components/UsedComponent/BetweenHead&Header'
+import Footer from '../components/Footer'
 export default function Home() {
   return (
     <div>
@@ -21,7 +22,11 @@ export default function Home() {
         <AsideUsed/>
         <div id="popUpId"></div>
         <RestUsedPage/>
+        <div id='footerNeedPadding'>
+          <Footer/>
         </div>
+        </div>
+        
     </body>
     </div>
   )

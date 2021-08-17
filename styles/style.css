@@ -14,11 +14,12 @@
   
   html {
     /* scroll-behavior: smooth; */
+    font-family: 'Changa', sans-serif;
   }
   
   body,
   body * {
-    font-family: "Cairo";
+    font-family: 'Changa', sans-serif;
     outline: none !important;
   }
   
@@ -624,7 +625,7 @@
   
   .IGViedioPopUp > .videoContent > i {
     color: #ffffff;
-    font-family: sans-serif;
+    font-family: 'Changa', sans-serif;
     position: relative;
     top: -10px;
     left: 20px;
@@ -4723,7 +4724,7 @@
   }
   
   .accContainerN {
-    font-family: cairo;
+    font-family: 'Changa', sans-serif;
     border-top: solid 1px #d8d8d8;
     padding-top: 20px;
     padding-bottom: 20px;

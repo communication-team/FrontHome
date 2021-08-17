@@ -2,6 +2,7 @@ import Header from "../components/Header"
 import Head2 from "../components/Head2";
 // import 'assets/css/login.css'
 import react, { useState, useEffect } from 'react'
+import Footer from '../components/Footer'
 export default function Login() {
 
     const [loginuser, setLoginuser] = useState([]);
@@ -186,7 +187,9 @@ export default function Login() {
         </div>
         </div>
         </div>
-
+</div>
+<div id='footerNeedPadding' >
+<Footer/>
 </div>
 </body>
 </div>

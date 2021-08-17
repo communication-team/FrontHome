@@ -22,12 +22,14 @@ export default function Header (props) {
                         <a>سيارات مستعملة </a>
                         </Link>
                     </li>
-                    
-                    <li class="sellCarNewBtn hideBtn"><a href="/create_post" class="redBtn">اعرض سيارتك للبيع</a></li>
+                    <li class="sellCarNewBtn hideBtn">
+                        <a href="/create_post" class="redBtn">اعرض سيارتك للبيع</a>
+                    </li>
                     <li class="sellCarNewBtn hideBtn"><a href="/login" class="redBtn">
                     <i class="fas fa-user" id='userIcone'></i>
                         اسم المتسخدم 
-                        </a></li>
+                        </a>
+                    </li>
                     <li class="sellCarNewBtn hideBtn"><a href="/login" class="redBtn">
                         تسجيل دخول 
                         </a>

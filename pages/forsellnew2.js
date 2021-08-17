@@ -22,10 +22,11 @@ export default function Home() {
         <AsideUsed/>
         <div id="popUpId"></div>
         <RestUsedPage/>
-        </div>
         <div id='footerNeedPadding'>
           <Footer/>
         </div>
+        </div>
+        
     </body>
     </div>
   )

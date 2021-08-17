@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function HeaderDetail(props){
     return(
 
@@ -10,15 +12,34 @@ export default function HeaderDetail(props){
                                 </a>
                             </span>
                             <ul>
-                                <li class="sellCarNewBtn hideBtn">
-                                <a href="/post/add-post" class="redBtn">اعرض سيارتك للبيع</a>
-                                </li>
-                                <li>
-                                <span class="sideMenuToggle ">
-                                <img src="https://syarahcdn.syarah.com/syarah/bundles/menuToggle.svg" alt="" />
-                                </span>
-                                </li>
-                            </ul>
+                    <li>
+                    <Link href="/">
+                        <a>الصفحة الرئيسية </a>
+                    </Link>
+                    </li>
+                    <li>
+                        <Link href='/forsellnew'>
+                        <a>سيارات جديدة </a>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/forsellused">
+                        <a>سيارات مستعملة </a>
+                        </Link>
+                    </li>
+                    <li class="sellCarNewBtn hideBtn">
+                        <a href="/create_post" class="redBtn">اعرض سيارتك للبيع</a>
+                    </li>
+                    <li class="sellCarNewBtn hideBtn"><a href="/login" class="redBtn">
+                    <i class="fas fa-user" id='userIcone'></i>
+                        اسم المتسخدم 
+                        </a>
+                    </li>
+                    <li class="sellCarNewBtn hideBtn"><a href="/login" class="redBtn">
+                        تسجيل دخول 
+                        </a>
+                        </li>
+                    </ul>
             </div>
         </header>
   

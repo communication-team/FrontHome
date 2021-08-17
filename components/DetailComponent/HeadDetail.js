@@ -158,7 +158,11 @@ export default function HeadDeatil(props){
 <meta name="twitter:description" content="هونداي اكسنت  2020 39600 " />
 <meta name="twitter:image:src" content="https://syarahcdn.syarah.com/online/posts/77614/0x300/orignal-1625323939-648.jpg" />
 <link rel="manifest" href="manifest.json"></link>
-<link href="https://fonts.googleapis.com/css?family=Cairo:400,700,900" rel="stylesheet" />
+
+{/* <link href="https://fonts.googleapis.com/css?family=Cairo:400,700,900" rel="stylesheet" /> */}
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Changa&display=swap" rel="stylesheet"></link>
 <script type="text/jsx" async="" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
 <script>
      {script1()}
@@ -186,6 +190,7 @@ export default function HeadDeatil(props){
 <link rel="stylesheet" href="targetPage/New folder/static/css/detail.css"/>
 {/* <link rel="stylesheet" href="targetPage/New folder/static/css/detail.css"> */}
 
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
 <script>
   {script7()}

@@ -4,18 +4,27 @@ import React from "react"
 import react, { useState, useEffect } from 'react'
 export default function CarCard(props){
 
-    const [images, setImages] = useState([
-        'https://i.pinimg.com/originals/f1/c7/d7/f1c7d757fb41c4eadd1b8796b5c225b4.jpg',
-'https://www.extremetech.com/wp-content/uploads/2019/12/SONATA-hero-option1-764A5360-edit.jpg',
-'https://ichef.bbci.co.uk/news/1024/branded_news/F0B2/production/_118681616_gettyimages-1199242135.jpg'
+    const [images, setImages] = useState([]);
 
-    ]);
 
+    useEffect(() => {
+
+        setImages([props.info.primary_image,
+            props.info.image1,
+            props.info.image2,
+            props.info.image3,
+            props.info.image4])
+     
+
+       
+       
+       
+    }, [images])
 
     function changeImage(event)
     {
 
-       
+       console.log(images)
         if(event.target.id=='prv')
         {
             let image=document.getElementById('changeimages')
@@ -99,9 +108,24 @@ export default function CarCard(props){
                     <div className="singleThumbCC activeCC has360Image ">
                         <div className="TumbLoadImage-module__animatedBackground___wYC5z">
                         </div>
-                        <img className="TumbLoadImage-module__loading___3EJWH " src="https://syarahcdn.syarah.com/online/posts/77614/0x300/orignal-1625323939-648.jpg" alt="" />
+                        <img className="" src={props.info.image1} alt="" />
                     </div>
-                    <div className="singleThumbCC   hasVideo">
+                    <div className="singleThumbCC activeCC has360Image ">
+                        <div className="TumbLoadImage-module__animatedBackground___wYC5z">
+                        </div>
+                        <img className="" src={props.info.image2} alt="" />
+                    </div>
+                    <div className="singleThumbCC activeCC has360Image ">
+                        <div className="TumbLoadImage-module__animatedBackground___wYC5z">
+                        </div>
+                        <img className="" src={props.info.image3} alt="" />
+                    </div>
+                    <div className="singleThumbCC activeCC has360Image ">
+                        <div className="TumbLoadImage-module__animatedBackground___wYC5z">
+                        </div>
+                        <img className="" src={props.info.image4} alt="" />
+                    </div>
+                    {/* <div className="singleThumbCC   hasVideo">
                         <div className="TumbLoadImage-module__animatedBackground___wYC5z">
                         </div>
                         <img className="TumbLoadImage-module__loading___3EJWH " src="https://syarahcdn.syarah.com/online/posts/77614/0x300/orignal-1625408738-279.jpeg" alt="" />
@@ -211,7 +235,8 @@ export default function CarCard(props){
                     </div>
                     <img className="TumbLoadImage-module__loading___3EJWH " src="https://syarahcdn.syarah.com/online/posts/77614/0x154/orignal-1625323979-669.jpg" alt="" />
                 </div>
-                </div>
+                 */}
+                 </div>
             </div>
             </div>
         </div>

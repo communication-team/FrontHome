@@ -3,9 +3,10 @@ import Link from 'next/link'
 import Header from '../components/Header'
 import react, { useState, useEffect } from 'react'
 import axios from 'axios'
+import { app } from "../base";
 export default function CreatePost() {
 
-
+    const db = app.firestore();
   
     useEffect(() => {
 
@@ -14,6 +15,7 @@ export default function CreatePost() {
 if(!window.localStorage.info)
 {
     window.location='/login'
+    return;
 }
 
        
@@ -43,7 +45,13 @@ if(!window.localStorage.info)
     const [pyment, setPyment] = useState('');
     const [location, setLocation] = useState('');
 
-    const [images, setImages] = useState('');
+    const [primary_image, setPrimary_image] = useState('');
+    const [image1, setImage1] = useState('');
+    const [image2, setImage2] = useState('');
+    const [image3, setImage3] = useState('');
+    const [image4, setImage4] = useState('');
+
+    
 
     function saveData(event)
     {
@@ -60,7 +68,8 @@ if(!window.localStorage.info)
    console.log("Bearer "+JSON.parse(window.localStorage.getItem('token')))
         var formData = new FormData();
         const config = { headers: { 'Content-Type': 'multipart/form-data',  "Authorization": 'Bearer ' +JSON.parse(window.localStorage.getItem('token')) } };
-
+        //  const config = { headers: { 'Content-Type': 'multipart/form-data',  "Authorization": 'Bearer ' +'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI5MjI4NTA0LCJqdGkiOiJjZGJjYzI5YWJiOGU0YTE2OTZmZmM0Y2UwNDkzYTg2MSIsInVzZXJfaWQiOjF9.mFfMxK6iaBFh7cGvYBN89jb5Wzr63u5sscX4hj-u_uY' } };
+        
         formData.append("brand", brand);
         formData.append("transmission", tra);
         formData.append("cylinder", cy);
@@ -77,7 +86,11 @@ if(!window.localStorage.info)
         formData.append("carModel", model);
         formData.append("phone", phone);
         formData.append("user_name", JSON.parse(window.localStorage.getItem('info')).username);
-        formData.append("primary_image", "https://cdn05.carsforsale.com/00edeb262c05e5e9b49da5f72446249dc2/480x360/2013-jeep-wrangler-unlimited-sport-4x4-4dr-suv.jpg");
+        formData.append("primary_image", primary_image);
+        formData.append("image1", image1);
+        formData.append("image2", image2);
+        formData.append("image3", image3);
+        formData.append("image4", image4);
         formData.append("approved", 'false');
         formData.append("year", year);
         formData.append("color", color);
@@ -125,13 +138,90 @@ if(!window.localStorage.info)
         //     console.log(error);
         //   });
 
-        console.log(images)
+    
     }
 
-    function onImgChange(event)
+
+
+
+
+
+async function onImgChangePrimary(e)
+    {
+        const file = e.target.files[0];
+        const storageRef = app.storage().ref();
+        const fileRef = storageRef.child(file.name);
+        await fileRef.put(file);
+        let temp=await fileRef.getDownloadURL()
+        await db.collection("users").doc(file.name+Date.now()).set({
+            name: file.name+Date.now(),
+            avatar: temp,
+          });
+          setPrimary_image(temp)
+        
+    }
+    async  function onImgChange1(e)
     {
         
-        setImages([...images, ...event.target.files])
+        // setImage1(event.target.files[0])
+        const file = e.target.files[0];
+        const storageRef = app.storage().ref();
+        const fileRef = storageRef.child(file.name);
+        await fileRef.put(file);
+        let temp=await fileRef.getDownloadURL()
+        await db.collection("users").doc(file.name+Date.now()).set({
+            name: file.name+Date.now(),
+            avatar: temp,
+          });
+          setImage1(temp);
+    
+      
+    }
+    async  function onImgChange2(e)
+    {
+        
+        const file = e.target.files[0];
+        const storageRef = app.storage().ref();
+        const fileRef = storageRef.child(file.name);
+        await fileRef.put(file);
+        let temp=await fileRef.getDownloadURL()
+        await db.collection("users").doc(file.name+Date.now()).set({
+            name: file.name+Date.now(),
+            avatar: temp,
+          });
+          setImage2(temp);
+ 
+      
+    }
+    async   function onImgChange3(e)
+    {
+        const file = e.target.files[0];
+        const storageRef = app.storage().ref();
+        const fileRef = storageRef.child(file.name);
+        await fileRef.put(file);
+        let temp=await fileRef.getDownloadURL()
+        await db.collection("users").doc(file.name+Date.now()).set({
+            name: file.name+Date.now(),
+            avatar: temp,
+          });
+          setImage3(temp);
+
+      
+    }
+    async  function onImgChange4(e)
+    {
+        const file = e.target.files[0];
+        const storageRef = app.storage().ref();
+        const fileRef = storageRef.child(file.name);
+        await fileRef.put(file);
+        let temp=await fileRef.getDownloadURL()
+        await db.collection("users").doc(file.name+Date.now()).set({
+            name: file.name+Date.now(),
+            avatar: temp,
+          });
+          setImage4(temp);
+
+          
       
     }
     return (
@@ -330,8 +420,16 @@ if(!window.localStorage.info)
     
     
     
-    <label for="image">اضافة صورة</label>
-    <input  type="file" multiple name="imagesArray" onChange={onImgChange}  accept="image/*" name="image" id="file" ></input>
+    <label for="image"> اضافة صورة الرئيسية</label>
+    <input  type="file"  name="imagesArray" onChange={onImgChangePrimary}  accept="image/*" name="image" id="file" ></input>
+    <label for="image">  اضافة صورة جانبية</label>
+    <input  type="file"  name="imagesArray" onChange={onImgChange1}  accept="image/*" name="image1" id="file1" ></input>
+    <label for="image">اضافة صورة جانبية</label>
+    <input  type="file"  name="imagesArray" onChange={onImgChange2}  accept="image/*" name="image2" id="file2" ></input>
+    <label for="image">اضافة صورة جانبية</label>
+    <input  type="file"  name="imagesArray" onChange={onImgChange3}  accept="image/*" name="image3" id="file3" ></input>
+    <label for="image">اضافة صورة جانبية</label>
+    <input  type="file"  name="imagesArray" onChange={onImgChange4}  accept="image/*" name="image4" id="file4" ></input>
    
     
     <input type="submit" value="Submit"/>

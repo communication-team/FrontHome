@@ -1,10 +1,16 @@
 import Link from 'next/link'
-
+import Logo from '../public/assets/images/sayartakLogo-removebg-preview.png'
+import Image from 'next/image'
 export default function Header (props) {
     return(
         <header class="siteHeader " style={{margin:"0", width:"100%"}}>
             <div class="container innerHdr">
-               <span><a href="/" ><img src="/home/mohammad/401/EcommerceProject/frontEnd/FrontHome/public/assets/images/sayartakLogo.svg" alt="" /></a></span>
+               {/* <span><a href="/" ><img src="https://syarahcdn.syarah.com/syarah/bundles/logo.svg" alt="" /></a></span> */}
+               <span><a href="/" >
+                   {/* <img src="https://syarahcdn.syarah.com/syarah/bundles/logo.svg" alt="" /> */}
+                   {/* <Image style={{width: '74px' ,height: '31px' }}  src={Logo} alt="audi_Container1" /> */}
+
+                </a></span>
                 {/* for logo  */}
                 <ul>
                     <li>

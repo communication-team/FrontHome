@@ -6,7 +6,14 @@ export default function Container1(props){
         <section class="section1 ">
             <div class="container">
                 <div class="section1Content">
-                    <h1><span>اشتري سيارتك من </span><br /><strong>سيارتك</strong></h1><p>جديد أو مستعمل وحنا نوصلها لين عندك</p>
+                    <h1>
+                        <span>اشتري سيارتك  </span>
+                        <br />
+                        <span>من </span>
+                        <br />
+                        <strong>سيارتك</strong>
+                    </h1>
+                    <p>جديد أو مستعمل</p>
                 </div>
                 <Image class="m-hide" src={audi_Container1} alt="audi_Container1" />
             </div>

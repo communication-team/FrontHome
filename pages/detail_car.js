@@ -21,6 +21,7 @@ export default function detail_car(){
               <div className="hasAuthPad">
                 {/* <HeaderDetail/> */}
                 <Header/>
+                
                 <MainDetail/>
                 <Footer/>
                 {/* <FooterDetail/> */}

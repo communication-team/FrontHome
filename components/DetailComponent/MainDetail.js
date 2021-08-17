@@ -3,16 +3,13 @@ import React from 'react'
 import axios from 'axios'
 import react, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
+
 export default function MainDetail(props){
   const [info, setInfo] = useState([]);
 
   const router = useRouter()
   console.log(router.query.post);
   useEffect(() => {
-
-       
-
-
     getData()
    
    

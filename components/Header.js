@@ -2,9 +2,9 @@ import Link from 'next/link'
 
 export default function Header (props) {
     return(
-        <header class="siteHeader ">
+        <header class="siteHeader " style={{margin:"0", width:"100%"}}>
             <div class="container innerHdr">
-               <span><a href="/"><img src="logo.png" alt="" /></a></span>
+               <span><a href="/" ><img src="/home/mohammad/401/EcommerceProject/frontEnd/FrontHome/public/assets/images/sayartakLogo.svg" alt="" /></a></span>
                 {/* for logo  */}
                 <ul>
                     <li>
@@ -22,9 +22,18 @@ export default function Header (props) {
                         <a>سيارات مستعملة </a>
                         </Link>
                     </li>
-                    <li class="sellCarNewBtn hideBtn"><a href="/create_post" class="redBtn">اعرض سيارتك للبيع</a></li>
-                    <li><span class="sideMenuToggle "><img src="https://syarahcdn.syarah.com/syarah/bundles/menuToggle.svg" alt="" /></span>
+                    <li class="sellCarNewBtn hideBtn">
+                        <a href="/create_post" class="redBtn">اعرض سيارتك للبيع</a>
                     </li>
+                    <li class="sellCarNewBtn hideBtn"><a href="/login" class="redBtn">
+                    <i class="fas fa-user" id='userIcone'></i>
+                        اسم المتسخدم 
+                        </a>
+                    </li>
+                    <li class="sellCarNewBtn hideBtn"><a href="/login" class="redBtn">
+                        تسجيل دخول 
+                        </a>
+                        </li>
                     </ul>
             </div>
         </header>

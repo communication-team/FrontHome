@@ -35,7 +35,7 @@
     }
 
     .btnsContQ>a {
-        background-color: #ec6234;
+        background-color: #154f9c;
         background-color: #ed4f25;
         font-weight: bold;
         display: flex;
@@ -64,8 +64,8 @@
         background-repeat:no-repeat;
         overflow: hidden;
         outline:none;
-        color: #ec6234 !important;
-        border-color: #ec6234;
+        color: #154f9c !important;
+        border-color: #154f9c;
     }
     .redBtn{
         color:#ffffff !important

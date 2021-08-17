@@ -117,6 +117,7 @@ export default function Head2(props){
         <base href="/" />
         <title>Sayartak</title>
         <meta charSet="utf-8" />
+
         <link rel="icon" type="image/ico" href="/favicon.ico?v1.0" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -125,8 +126,12 @@ export default function Head2(props){
         <meta name="msapplication-TileImage" content="https://syarah.com/images/favicon.ico?v=1.2" />
         <meta name="description" content="اشتري سيارتك اونلاين بسهولة و من أي مكان في السعودية. تصفح العديد من السيارات الجديدة والمستعملة. جميع سياراتنا المستعملة مفحوصة ومضمونة، وكمان نوصلها لين عندك" />
         <link rel="manifest" href="manifest.json"></link>
-        <link href="https://fonts.googleapis.com/css?family=Cairo:400,700,900" rel="stylessheet" />
+
+        {/* <link href="https://fonts.googleapis.com/css?family=Cairo:400,700,900" rel="stylessheet" /> */}
         <script type="text/jsx" async="" src="https://www.googletagservices.com/tag/js/gpt.js"> </script>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Changa&display=swap" rel="stylesheet"/>
             {script1()}
         <script></script>
         <script>
@@ -145,6 +150,7 @@ export default function Head2(props){
         src="https://www.facebook.com/tr?id=1669715986469750&ev=PageView&noscript=1"
         /></noscript>
         <link rel="stylessheet" href="static/css/client.791f187b.css"/>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
         <script>{script6()}</script>
         <script src="/static/js/client.ab5fdfe5.js?v=1.2" defer></script> 
     </Head>

@@ -14,11 +14,12 @@
   
   html {
     /* scroll-behavior: smooth; */
+    font-family: 'Changa', sans-serif;
   }
   
   body,
   body * {
-    font-family: "Cairo";
+    font-family: 'Changa', sans-serif;
     outline: none !important;
   }
   
@@ -68,9 +69,9 @@
   /* color fixed classes */
   
   .redBtn {
-    background-color: #ec6234 !important;
+    background-color: #154f9c !important;
     transition: 0.2s;
-    border: solid 1px #ec6234 !important;
+    border: solid 1px #154f9c !important;
     box-sizing: border-box;
     color: #ffffff !important;
   }
@@ -86,9 +87,9 @@
   .redBtnTrans {
     background-color: transparent !important;
     transition: 0.2s;
-    border: solid 1px #ec6234 !important;
+    border: solid 1px #154f9c !important;
     box-sizing: border-box;
-    color: #ec6234 !important;
+    color: #154f9c !important;
   }
   
   .redBtnTrans:hover {
@@ -162,7 +163,7 @@
     position: absolute;
     width: 15px;
     height: 15px;
-    background-color: #ec6234;
+    background-color: #154f9c;
     border-radius: 50%;
     top: -3px;
   }
@@ -624,7 +625,7 @@
   
   .IGViedioPopUp > .videoContent > i {
     color: #ffffff;
-    font-family: sans-serif;
+    font-family: 'Changa', sans-serif;
     position: relative;
     top: -10px;
     left: 20px;
@@ -663,7 +664,7 @@
   }
   
   .section1Content > a {
-    background-color: #ec6234;
+    background-color: #154f9c;
     background-color: #ed4f25;
     font-weight: bold;
     display: block;
@@ -736,7 +737,7 @@
   .addBanner {
     display: flex;
     align-items: center;
-    border: solid 2px #ec6234;
+    border: solid 2px #154f9c;
     border-radius: 8px;
     padding: 25px 23px;
     margin: 0 auto;
@@ -819,7 +820,7 @@
     content: "";
     width: 104px;
     height: 5px;
-    background-color: #ec6234;
+    background-color: #154f9c;
     position: absolute;
     left: calc(50% - 104px / 2);
     bottom: 0px;
@@ -2231,7 +2232,7 @@
   
   .callHelpContainer > strong::after {
     content: "";
-    background-color: #ec6234;
+    background-color: #154f9c;
     height: 3px;
     width: 64px;
     position: absolute;
@@ -2379,7 +2380,7 @@
     content: "";
     width: 104px;
     height: 5px;
-    background-color: #ec6234;
+    background-color: #154f9c;
     position: absolute;
     left: calc(50% - 104px / 2);
     bottom: 65px;
@@ -4723,7 +4724,7 @@
   }
   
   .accContainerN {
-    font-family: cairo;
+    font-family: 'Changa', sans-serif;
     border-top: solid 1px #d8d8d8;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -6139,8 +6140,8 @@
   
   .pageIntroContent > div > a:last-child:not(:hover):not(:active) {
     background-color: transparent !important;
-    border-color: #ec6234 !important;
-    color: #ec6234 !important;
+    border-color: #154f9c !important;
+    color: #154f9c !important;
   }
   
   .pageIntroContent > strong {
@@ -10218,7 +10219,7 @@
   
   .flex > div:first-child > span {
     font-weight: bold;
-    color: #ec6234;
+    color: #154f9c;
     font-size: 24px;
     line-height: 45px;
     display: block;
@@ -12100,7 +12101,7 @@
     /* ramadan only */
     /* .homePageMobileStyle .sellCarNewBtn > a {
       background-color: #eff2f5 !important;
-      color: #ec6234 !important;
+      color: #154f9c !important;
     } */
     /* ramadan only */
     /* end sellCarNewBtn */

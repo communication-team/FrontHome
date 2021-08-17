@@ -52,12 +52,8 @@ export default function SearchByMakeContainer(props) {
                             {/* <span>سيارة</span> */}
                         </div>
                     </a>
-                    <a class="singleLogoMake" href="/post/search?is_online=0&amp;make_id=19">
-                        <div class="make_19">
-                            {/* <span>566 </span> */}
-                            {/* <span>سيارة</span> */}
-                        </div></a></div>
-                    <button class="whtBtn viewAllMakes">شاهد جميع الماركات</button>
+              
+                    </div>
                     </div>
                     </section>
     )

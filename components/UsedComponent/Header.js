@@ -6,27 +6,30 @@ import Image from "next/dist/client/image"
 
 export default function HeaderUsed (props) {
     return(
-        <header class="siteHeader searchSiteHEader">
+        <header class="siteHeader ">
             <div class="container innerHdr">
-                <span class="SearchHEader">
-                    <a href="/">
-
-                        {/* <img src="https://syarahcdn.syarah.com/syarah/bundles/logo.svg" alt="" /> */}
-                        {/* <Image styles={{width:50 }} src={logo1} alt="logo" /> */}
-
-                    </a>
-                </span>
-          <ul>
-            <li class="sellCarNewBtn hideBtn">
-                <a href="/create_post" class="redBtn">اعرض سيارتك للبيع</a>
-            </li>
-            <li>
-                <span class="sideMenuToggle ">
-                <img src="https://syarahcdn.syarah.com/syarah/bundles/menuToggle.svg" alt="" />
-                </span>
-            </li>
-          </ul>
-        </div>
-      </header>
+               <span><a href="/"><img src="logo.png" alt="" /></a></span>
+                {/* for logo  */}
+                <ul>
+                    <li>
+                    <Link href="/">
+                        <a>الصفحة الرئيسية </a>
+                    </Link>
+                    </li>
+                    <li>
+                        <Link href='/forsellnew'>
+                        <a>سيارات جديدة </a>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/forsellused">
+                        <a>سيارات مستعملة </a>
+                        </Link>
+                    </li>
+                    <li class="sellCarNewBtn hideBtn"><a href="/create_post" class="redBtn">اعرض سيارتك للبيع</a></li>
+                    <li class="sellCarNewBtn hideBtn"><a href="/login" class="redBtn">تسجيل دخول</a></li>
+                    </ul>
+            </div>
+        </header>
     );
 }

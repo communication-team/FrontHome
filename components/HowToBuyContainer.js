@@ -5,7 +5,7 @@ export default function HowToBuyContainer(props) {
                 <h1 class="big">كيف تشتري سيارتك المستعملة<br/>سيارتك</h1>
             <div class="toggleImagesContainer">
                 <ul styles="transform: translate(0px, 0px);">
-                    <li class="readMe activeHow">
+                    <li class="readMe ">
                         <strong>1</strong><span>إبحث عن السيارة اللي تبيها</span>
                         <img class="m-show" src="https://syarahcdn.syarah.com/syarah/bundles/h1.png" alt=""/>
                     </li>

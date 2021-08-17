@@ -145,6 +145,7 @@ export default function Head2(props){
         src="https://www.facebook.com/tr?id=1669715986469750&ev=PageView&noscript=1"
         /></noscript>
         <link rel="stylessheet" href="static/css/client.791f187b.css"/>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
         <script>{script6()}</script>
         <script src="/static/js/client.ab5fdfe5.js?v=1.2" defer></script> 
     </Head>

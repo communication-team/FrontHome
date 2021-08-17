@@ -1,4 +1,5 @@
 import Header from "../components/Header"
+import Head2 from "../components/Head2";
 // import 'assets/css/login.css'
 import react, { useState, useEffect } from 'react'
 export default function Login() {
@@ -9,11 +10,6 @@ export default function Login() {
     const [password, setPassword] = useState([]);
     const [copass, setCopass] = useState([]);
     const [email, setemail] = useState([]);
-
- 
-    
-  
-  
     async function  getData()
     {
        
@@ -36,33 +32,22 @@ export default function Login() {
             // always executed
         });
     }
-
-
     return (
         <div>
-         
-             <Header/>
-             <html lang="ar" dir="rtl" class=""><head>
-
-
-
-
-{/* <link href="static/css/login.css" rel="stylesheet"/> */}
-<link rel="stylesheet" href="../assets/css/app.css"/>
-
-</head>
- <body>
-<div class="container-fluid header">
-    <div class="container">
-
-    <div class="content">
-                
-        <div class="container">
-    <ul class="breadcrumb">
-</ul>    </div>
-    <div class="container">
-    <div class="clearfix main_titles_box">
-        <h1 class="pull-right"><span>دخول</span></h1>
+                 {/* <head> </head> */}
+                <Head2/>
+                <link rel="stylesheet" href="../assets/css/app.css"/>
+                <body dir="rtl">
+                <Header/>
+                <div class="container-fluid header">
+                    <div class="container">
+                        <div class="content">
+                            <div class="container">
+                                <ul class="breadcrumb"></ul>
+                            </div>
+                            <div class="container">
+                                <div class="clearfix main_titles_box">
+                                    <h1 class="pull-right"><span>دخول</span></h1>
     </div>
 </div>
 
@@ -178,10 +163,7 @@ export default function Login() {
         </div>
         </div>
     </div>
-        </div>
-        
-                
-                
+        </div>                
         <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 sa_forms_titles"></div>
  <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
@@ -198,27 +180,16 @@ export default function Login() {
                               </p>
                         </div>
         <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12 sa_forms_notes"></div>
-    </div>
-        </form>    </div>
-   
-</div>
-<div class="help_box">
-                    <a onclick="PushDataLayer('communication.contact','Communication', 'Contact', 'Phone');" href="" class="btn">اتصل بنا للمساعدة</a> 
-
-                </div>
-
-
-    
-
-                </div>
-
-            </div>
+        </div>
+        </form>
+        </div>
+        </div>
+        </div>
+        </div>
 
 </div>
 </body>
-</html>
-
-                </div>
+</div>
         
             )
 }

@@ -228,12 +228,12 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    color: #697a8f;
+    color: rgb(100, 0, 255);
     font-size: 12px;
   }
   
   .dataFooterContent a {
-    color: #697a8f;
+    color: rgb(100, 0, 255);
   }
   
   .dataFooterContent ul a {
@@ -1062,7 +1062,7 @@
   }
   
   .singleLogoMake > div {
-    color: #697a8f;
+    color: rgb(100, 0, 255);
     font-size: 14px;
     width: 100%;
     text-align: center;
@@ -2007,7 +2007,7 @@
   }
   
   .ratingSection > .container > h2 > div > span:not(.sep) {
-    color: #697a8f;
+    color: rgb(100, 0, 255);
     font-size: 21px;
   }
   
@@ -5430,7 +5430,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 4px;
-    border: solid 1px #697a8f;
+    border: solid 1px rgb(100, 0, 255);
     color: #484848 !important;
     margin: 0 calc(15px / 2);
     box-sizing: border-box;
@@ -10521,7 +10521,7 @@
   
   .SOLacPrice .oldPriceW {
     font-weight: bold;
-    color: #697a8f;
+    color: rgb(100, 0, 255);
     font-size: 16px;
     line-height: 24px;
     text-decoration: line-through;
@@ -12830,7 +12830,7 @@
     }
     .headingRP > .RPH > span {
       font-size: 14px;
-      color: #697a8f;
+      color: rgb(100, 0, 255);
     }
     .headingRP > .RPH > span::before {
       height: 15px;

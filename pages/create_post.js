@@ -295,9 +295,7 @@ pauseOnHover
             <div class="rightSideSellCar">
                 <h1>اعرض سيارتك للبيع في اكبر سوق سيارات في المملكة</h1>
                 <p>اعرض سيارتك على آلاف المشترين وتواصل معهم بسهولة</p>
-                <div class="btnsContQ">
-                                <button onclick="PushDataLayer('addpost','Add Post', 'Visit', 'navigation');" href='https://syarah.com/post/selectmake?add_post=1&utm_source=syarah-new&utm_medium' class="btn btn-warning redBtn">اعرض سيارتك عالسوق</button>                </div>
-            </div>
+                </div>
         </div>
         <div>
             <img src="/assets/images/ttt.png" alt="اعرض سيارتك للبيع" />
@@ -494,7 +492,7 @@ pauseOnHover
    
    
     
-    <input type="submit" value="Submit" style={{ 
+    <input type="submit" value="احفظ" style={{ 
       gridColumnStart: '1',
     gridColumnEnd: '3'}}/>
   </form>

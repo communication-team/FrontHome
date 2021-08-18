@@ -780,10 +780,17 @@ return (
                                 class="currentPrice" styles="color:">{items.price}
                                 <span>دينار اردني</span>
                             </span></span></strong>
-                                <div><span class="location">{items.location}</span><span class="distance"> {items.status=='false'?'مستعملة':'جديده'} </span><span class="time"> قبل 8
-                                    ساعة
+                                <div>
+                                    <span class="location">
+                                        {items.location}</span>
+                                    {/* <span class="distance">
+                                         {items.status=='false'?'مستعملة':'جديده'} </span>
+                                          */}
+                                         {/* <span class="time"> قبل 8 */}
+                                    {/* ساعة */}
 
-                                </span></div>
+                                {/* </span> */}
+                                </div>
                             </div>
                         </a></Link>)
                             })

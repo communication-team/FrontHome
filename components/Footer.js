@@ -8,13 +8,19 @@ export default function Footer(props) {
                     {/* <div> */}
                         <ul>
                             <li>
-                                <a href="/">الرئيسية</a>
+                                <strong>
+                                    <a href="/">الرئيسية</a>
+                                </strong>
                             </li>
                             <li>
-                                <a href="https://syarah.com/site/about">من نحن</a>
+                            <strong>
+                                <a href="/">من نحن</a>
+                            </strong>
                             </li>
                             <li>
-                                <a href="https://syarah.com/site/contact">اتصل بنا</a>
+                                <strong>
+                                    <a href="https://api.whatsapp.com/send/?phone=%2B962796207201&text&app_absent=0">اتصل بنا</a>
+                                </strong>
                             </li>
                             {/* <li>
                                 <a href="https://syarah.com/blog" target="_blank" rel="noopener noreferrer">مدونة سيارة </a>
@@ -53,7 +59,11 @@ export default function Footer(props) {
                                     <img src="https://syarahcdn.syarah.com/syarah/bundles/BankTransfer.svg" alt="" />
                                 </li>
                             </ul> */}
-                            <p>جميع الحقوق محفوظة </p>
+                            <p>
+                                <strong>
+                                جميع الحقوق محفوظة
+                                </strong>
+                                 </p>
                     {/* </div> */}
                 </div>
             </div>

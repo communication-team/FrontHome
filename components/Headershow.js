@@ -36,8 +36,8 @@ export default function Header (props) {
                 </Link></span>
             {/* for logo  */}
             <ul style={{
-    width: '42%',
-    fontSize: '143%',
+    width: '51%',
+    fontSize: '117%',
     fontFamily: 'Changa,sans-serif',
     justifyContent: 'space-between'
 }}>

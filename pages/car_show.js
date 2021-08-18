@@ -16,7 +16,10 @@ export default function Car_Show() {
     const [count, setCount] = useState(0);
     const [colorprice,setColorPrice]=useState(0)
     const [sticprice,setsticPrice]=useState(0)
-    const [totle,setTotle]=useState(carspec[router.query.id].price)
+    // const [totle,setTotle]=useState(carspec[router.query.id].price)
+   
+    const [totle,setTotle]=useState(0)
+    const [number,setNumber]=useState(0)
     var size=25;
     var postionX=50;
     var postionY=50;
@@ -26,8 +29,14 @@ export default function Car_Show() {
         var prev = null;
 
 
-   
+            
+        if(router.query.id!=undefined || router.query.id!=null)
+        {
+            setNumber(router.query.id)
+    
+            setTotle(carspec[router.query.id].price)
         
+        }
   
 
 
@@ -51,12 +60,11 @@ export default function Car_Show() {
                     }
                 }
                 // if(carspec[router.query.id].price >=totle)
-                if(carspec.length!=0)
-                {
+               
                 console.log(sticprice+ carspec[router.query.id].price+ 500)
                 setTotle(sticprice+ carspec[router.query.id].price+ 500)
                 setColorPrice(500)
-                }
+                
        
 
             });
@@ -133,11 +141,10 @@ export default function Car_Show() {
         }else{
             setStickerNo(17)
         }
-        if(carspec.length!=0)
-        {
+       
         setTotle(colorprice+ carspec[router.query.id].price+ 300)
         setsticPrice(300)
-        }
+      
     }
 
     return (
@@ -163,9 +170,9 @@ export default function Car_Show() {
                 <div className="col-lg-8">
                     <div className="car-editor">
                         <div id="preview">
-                            <div className="car-sticker" style={{WebkitMaskImage: "url(" + "./assets/images/cars/" + carspec[router.query.id].slug+ "-side-paint.png" + ")", backgroundImage: "url(" + "./assets/images/stickers/graffit" + stickerNo + ".png" + ")"}}></div>
-                            <div className="car-paint" style={{backgroundImage:"url(" + "./assets/images/cars/" + carspec[router.query.id].slug+ "-side-paint.png" + ")" }}></div>
-                            <div className="car-preview" style={{backgroundImage:"url(" + "./assets/images/cars/" + carspec[router.query.id].slug+ "-side.png" + ")" }} ></div>
+                            <div className="car-sticker" style={{WebkitMaskImage: "url(" + "./assets/images/cars/" + carspec[number].slug+ "-side-paint.png" + ")", backgroundImage: "url(" + "./assets/images/stickers/graffit" + stickerNo + ".png" + ")"}}></div>
+                            <div className="car-paint" style={{backgroundImage:"url(" + "./assets/images/cars/" + carspec[number].slug+ "-side-paint.png" + ")" }}></div>
+                            <div className="car-preview" style={{backgroundImage:"url(" + "./assets/images/cars/" + carspec[number].slug+ "-side.png" + ")" }} ></div>
                         </div>
                         <div className="preview-buttons">
                             <button onClick={prevSticker}><i className="fas fa-chevron-left"></i></button>
@@ -203,21 +210,21 @@ export default function Car_Show() {
                     </div>
                 </div>
                 <div className="col-lg-4">
-                    <h1>{carspec[router.query.id].name}</h1>
+                    <h1>{carspec[number].name}</h1>
 
                     <div>
                         <small><b>سنة الصنع</b></small>
-                        <p>{carspec[router.query.id].model}</p>
+                        <p>{carspec[number].model}</p>
                     </div>
 
                     <div>
                         <small><b>سعة المحرك</b></small>
-                        <p>{carspec[router.query.id].engine}</p>
+                        <p>{carspec[number].engine}</p>
                     </div>
 
                     <div>
                         <small><b>عدد الاحصنة</b></small>
-                        <p>{carspec[router.query.id].hourcePower}</p>
+                        <p>{carspec[number].hourcePower}</p>
                     </div>
 
                     <div>
@@ -226,7 +233,7 @@ export default function Car_Show() {
                     </div>
                     
                     <div className="car-price border p-3">
-                        <p className="d-flex justify-content-between mb-2">سعر <span>{carspec[router.query.id].price}</span></p>
+                        <p className="d-flex justify-content-between mb-2">سعر <span>{carspec[number].price}</span></p>
                         <p className="d-flex justify-content-between mb-2">اللون <span>+500 JOD</span></p>
                         <p className="d-flex justify-content-between mb-2">ستكرز <span>+300 JOD</span></p>
                         {/* <p className="d-flex justify-content-between mb-3 pb-3 border-bottom">Tax <span>+800 JOD</span></p> */}

@@ -38,6 +38,7 @@ export default function Header (props) {
             <ul style={{
     width: '56%',
     fontSize: '96%',
+    fontWeight:'bold',
     fontFamily: 'Changa,sans-serif',
     justifyContent: 'space-between'
 }}>

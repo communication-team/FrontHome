@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import react, { useState, useEffect } from 'react'
+import  { useState, useEffect } from 'react'
 export default function HeaderDetail(props){
     const [info, setInfo] = useState('');
 

@@ -1,7 +1,7 @@
 import React from "react"
-import Link from 'next/link'
+
 import Header from '../components/Header'
-import react, { useState, useEffect } from 'react'
+import  { useState, useEffect } from 'react'
 import axios from 'axios'
 
 import { app } from "../base";
@@ -268,7 +268,7 @@ pauseOnHover
 />
         <html lang="en">
         {/* <head>
-            <meta charset="UTF-8"/>
+            <meta charSet="UTF-8"/>
             <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
             <title>Document</title>
@@ -503,9 +503,9 @@ pauseOnHover
         </main>
 
 
-
+{/* 
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossOrigin="anonymous"></script>
-            <script src="./assets/js/app.js"></script>
+            <script src="./assets/js/app.js"></script> */}
         </body>
         </html>
         </React.Fragment>

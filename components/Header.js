@@ -1,7 +1,6 @@
 import Link from 'next/link'
-// import Logo from '../public/assets/images/sayartakLogo-removebg-preview.png'
-// import Image from 'next/image'
-import react, { useState, useEffect } from 'react'
+
+import  { useState, useEffect } from 'react'
 export default function Header (props) {
 
     const [info, setInfo] = useState('');

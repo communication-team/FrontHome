@@ -1,9 +1,6 @@
 import Link from 'next/link'
-// import Image from 'next/image'
-import Image from "next/dist/client/image"
 
-// import logo1 from '../public/assets/images/logo1.png'
-import react, { useState, useEffect } from 'react'
+import  { useState, useEffect } from 'react'
 export default function HeaderUsed (props) {
 
     const [info, setInfo] = useState('');

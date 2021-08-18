@@ -1,4 +1,4 @@
-// import Head from 'next/head'
+
 import Head from 'next/dist/shared/lib/head';
 export default function HeadDeatil(props){
     function script1(){

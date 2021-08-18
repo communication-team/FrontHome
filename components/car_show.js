@@ -1,12 +1,12 @@
 import React from "react"
 
-import Link from 'next/link'
+
 
 import {useState,useEffect} from "react";
 
 import { useRouter } from 'next/router'
 import Header from '../components/Header'
-import carspec from './ojects'
+import carspec from '../components/ojects'
 
 
 
@@ -51,9 +51,12 @@ export default function Car_Show() {
                     }
                 }
                 // if(carspec[router.query.id].price >=totle)
+                if(carspec.length!=0)
+                {
                 console.log(sticprice+ carspec[router.query.id].price+ 500)
                 setTotle(sticprice+ carspec[router.query.id].price+ 500)
                 setColorPrice(500)
+                }
        
 
             });
@@ -118,9 +121,11 @@ export default function Car_Show() {
         }else{
             setStickerNo(0)
         }
-        console.log(colorprice+' '+ carspec[router.query.id].price)
+        if(carspec.length!=0)
+                {
         setTotle(colorprice+ carspec[router.query.id].price+ 300)
         setsticPrice(300)
+                }
     }
     function prevSticker(){
         if(stickerNo > 1){
@@ -128,9 +133,11 @@ export default function Car_Show() {
         }else{
             setStickerNo(17)
         }
-        console.log(colorprice+' '+ carspec[router.query.id].price)
+        if(carspec.length!=0)
+        {
         setTotle(colorprice+ carspec[router.query.id].price+ 300)
         setsticPrice(300)
+        }
     }
 
     return (
@@ -138,7 +145,7 @@ export default function Car_Show() {
 
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
+    <meta charSet="UTF-8"/>
     <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Document</title>
@@ -148,33 +155,7 @@ export default function Car_Show() {
 </head>
 <body style={{direction: 'rtl'}}>
             <Header/>
-{/* <body>
-<header className="siteHeader " style={{position:'unset',direction:'rtl' , margin:'0',width:'100%',display:'block'}}>
-            <div className=" innerHdr" style={{justifyContent:'space-between'}}>
-                <span style={{flexGrow:'1'}}><a href="/"><img src="" alt="" /></a></span>
-               
-                <ul style={{marginLeft: '-58%',marginBottom:'0',flexGrow:'1'}}>
-                    <li>
-                    <Link href="/">
-                        <a style={{color:'rgb(100, 0, 255)'}}>الصفحة الرئيسية </a>
-                    </Link>
-                    </li>
-                    <li>
-                        <Link href='/forsellnew'>
-                        <a  style={{color:'rgb(100, 0, 255)'}}>سيارات جديدة </a>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="/forsellused">
-                        <a  style={{color:'rgb(100, 0, 255)'}}>سيارات مستعملة </a>
-                        </Link>
-                    </li>
-                    <li  className="sellCarNewBtn hideBtn"><a href="/post/add-post" className="redBtn">اعرض سيارتك للبيع</a></li>
-                    <li style={{paddingRight:'2%'}}><span className="sideMenuToggle "><img src="https://syarahcdn.syarah.com/syarah/bundles/menuToggle.svg" alt="" /></span>
-                    </li>
-                    </ul>
-            </div>
-        </header> */}
+
     <section id="car-detail" style={{direction: 'ltr'}}>
         <div className="container">
             <div className="row">
@@ -263,8 +244,7 @@ export default function Car_Show() {
         </div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossOrigin="anonymous"></script>
-    <script src="./assets/js/app.js"></script>
+
 </body>
 </html>
 

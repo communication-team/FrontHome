@@ -4,6 +4,8 @@ import Head2 from "../components/Head2";
 import react, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Footer from '../components/Footer'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function Login() {
 
     const [loginuser, setLoginuser] = useState([]);
@@ -14,8 +16,15 @@ export default function Login() {
     const [email, setemail] = useState([]);
 
 
-
-
+    const notify = () => toast.error("Your Password and Username not correct ! ", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });
 
     async function getData() {
 
@@ -131,11 +140,13 @@ export default function Login() {
                     console.log('fff', response2);
                     window.localStorage.setItem('token', JSON.stringify(response.data.access))
                     window.localStorage.setItem('info', JSON.stringify(response2.data))
+                   
                     window.location = "/"
 
                 })
                 .catch(function (error) {
                     // handle error
+                    notify()
                     console.log('ffff', error);
 
                 })
@@ -148,6 +159,7 @@ export default function Login() {
 
 
         }).catch(function (error) {
+            notify()
             console.log(error)
         });
 
@@ -322,7 +334,19 @@ export default function Login() {
 
     return (
         <div>
+<ToastContainer
+position="top-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+/>
 
+<ToastContainer />
             <html lang="ar" dir="rtl" class="">
             <Head2/>
 

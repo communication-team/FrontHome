@@ -1,7 +1,28 @@
 import Link from 'next/link'
-import Logo from '../public/assets/images/sayartakLogo-removebg-preview.png'
-import Image from 'next/image'
+// import Logo from '../public/assets/images/sayartakLogo-removebg-preview.png'
+// import Image from 'next/image'
+import react, { useState, useEffect } from 'react'
 export default function Header (props) {
+
+    const [info, setInfo] = useState('');
+
+    
+
+    useEffect(() => {
+        if(window.localStorage.info)
+      setInfo(JSON.parse(window.localStorage.getItem('info')).username)
+     
+     
+  }, [])
+
+
+  function logout(e)
+  {
+    e.preventDefault();
+    window.localStorage.removeItem('info')
+    window.localStorage.removeItem('token')
+    window.location='/'
+  }
     return(
         <header class="siteHeader " style={{margin:"0"}}>
             <div class="container innerHdr">
@@ -31,15 +52,22 @@ export default function Header (props) {
                     <li class="sellCarNewBtn hideBtn">
                         <a href="/create_post" class="redBtn">اعرض سيارتك للبيع</a>
                     </li>
-                    <li class="sellCarNewBtn hideBtn"><a href="/login" class="redBtn">
-                    <i class="fas fa-user" id='userIcone'></i>
-                        اسم المتسخدم 
-                        </a>
-                    </li>
-                    <li class="sellCarNewBtn hideBtn"><a href="/login" class="redBtn">
+                    {
+                        info==''? <li class="sellCarNewBtn hideBtn"><a href="/login" class="redBtn">
                         تسجيل دخول 
                         </a>
-                        </li>
+                        </li>: <li class="sellCarNewBtn hideBtn" onClick={logout}>
+                            <a href="/" class="redBtn" style={{textAlign: 'center'}}>
+                    <i class="fas fa-user" id='userIcone'></i>
+                        {info}
+                        <br/>
+                        تسجيل الخروج
+                        </a>
+                    </li>
+
+                    }
+                   
+                   
                     </ul>
             </div>
         </header>

@@ -1,19 +1,26 @@
 import React from "react"
 
-
 import Link from 'next/link'
+
 import {useState,useEffect} from "react";
 
+import { useRouter } from 'next/router'
+import Header from '../components/Header'
+import carspec from './ojects'
 
 
 
 export default function Car_Show() {
-
+    
+    const router = useRouter()
     const [count, setCount] = useState(0);
+    const [colorprice,setColorPrice]=useState(0)
+    const [sticprice,setsticPrice]=useState(0)
+    const [totle,setTotle]=useState(carspec[router.query.id].price)
     var size=25;
     var postionX=50;
     var postionY=50;
-
+    console.log('ffff',router.query.id);
     useEffect(() => {
         var rad = document.querySelectorAll('.cube input');
         var prev = null;
@@ -43,6 +50,12 @@ export default function Car_Show() {
                         document.querySelector('.car-paint').style.filter = "hue-rotate(" + this.value + "deg)";
                     }
                 }
+                // if(carspec[router.query.id].price >=totle)
+                console.log(sticprice+ carspec[router.query.id].price+ 500)
+                setTotle(sticprice+ carspec[router.query.id].price+ 500)
+                setColorPrice(500)
+       
+
             });
         }
         
@@ -94,6 +107,30 @@ export default function Car_Show() {
         var sticker =document.querySelector('.car-sticker')
         sticker.style.backgroundPosition = postionX +"% " + postionY +"%";
         sticker.style.backgroundSize = size +"%";
+       
+    }
+    let [stickerNo, setStickerNo] = useState(0);
+
+    function nextSticker(){
+
+        if(stickerNo < 17){
+            setStickerNo(stickerNo+1)
+        }else{
+            setStickerNo(0)
+        }
+        console.log(colorprice+' '+ carspec[router.query.id].price)
+        setTotle(colorprice+ carspec[router.query.id].price+ 300)
+        setsticPrice(300)
+    }
+    function prevSticker(){
+        if(stickerNo > 1){
+            setStickerNo(stickerNo-1)
+        }else{
+            setStickerNo(17)
+        }
+        console.log(colorprice+' '+ carspec[router.query.id].price)
+        setTotle(colorprice+ carspec[router.query.id].price+ 300)
+        setsticPrice(300)
     }
 
     return (
@@ -109,11 +146,13 @@ export default function Car_Show() {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"/>
     <link rel="stylesheet" href="assets/css/app.css"/>
 </head>
-<body>
+<body style={{direction: 'rtl'}}>
+            <Header/>
+{/* <body>
 <header class="siteHeader " style={{position:'unset',direction:'rtl' , margin:'0',width:'100%',display:'block'}}>
             <div class=" innerHdr" style={{justifyContent:'space-between'}}>
                 <span style={{flexGrow:'1'}}><a href="/"><img src="" alt="" /></a></span>
-                {/* for logo  */}
+               
                 <ul style={{marginLeft: '-58%',marginBottom:'0',flexGrow:'1'}}>
                     <li>
                     <Link href="/">
@@ -135,7 +174,7 @@ export default function Car_Show() {
                     </li>
                     </ul>
             </div>
-        </header>
+        </header> */}
     <section id="car-detail" style={{direction: 'ltr'}}>
         <div class="container">
             <div class="row">
@@ -143,20 +182,20 @@ export default function Car_Show() {
                 <div class="col-lg-8">
                     <div class="car-editor">
                         <div id="preview">
-                            <div class="car-sticker" style={{WebkitMaskImage: "url(" + "./assets/images/cars/toyota-avalon-side-paint.png" + ")", backgroundImage: "url(" + "./assets/images/stickers/graffit1.png" + ")"}}></div>
-                            <div class="car-paint" style={{backgroundImage:"url(" + "./assets/images/cars/toyota-avalon-side-paint.png" + ")" }}></div>
-                            <div class="car-preview" style={{backgroundImage:"url(" + "./assets/images/cars/toyota-avalon-side.png" + ")" }} ></div>
+                            <div class="car-sticker" style={{WebkitMaskImage: "url(" + "./assets/images/cars/" + carspec[router.query.id].slug+ "-side-paint.png" + ")", backgroundImage: "url(" + "./assets/images/stickers/graffit" + stickerNo + ".png" + ")"}}></div>
+                            <div class="car-paint" style={{backgroundImage:"url(" + "./assets/images/cars/" + carspec[router.query.id].slug+ "-side-paint.png" + ")" }}></div>
+                            <div class="car-preview" style={{backgroundImage:"url(" + "./assets/images/cars/" + carspec[router.query.id].slug+ "-side.png" + ")" }} ></div>
                         </div>
                         <div class="preview-buttons">
-                            <button><i class="fas fa-chevron-left"></i></button>
-                            <button><i class="fas fa-chevron-right"></i></button>
+                            <button onClick={prevSticker}><i class="fas fa-chevron-left"></i></button>
+                            <button onClick={nextSticker}><i class="fas fa-chevron-right"></i></button>
                         </div>
                         <div class="sticker-editor d-flex">
                             <div class="text-center">
                                 <button onClick={stickerUp}><i class="fas fa-arrow-up"></i></button>
                                 <div class="d-flex align-items-center">
                                     <button onClick={stickerLeft}><i class="fas fa-arrow-left"></i></button>
-                                    <button  id="changeSticker" style={{backgroundImage:"url(" + "./assets/images/stickers/graffit1.png" + ")" }} ></button>
+                                    <button  id="changeSticker" style={{backgroundImage:"url(" + "./assets/images/stickers/graffit" + stickerNo +".png" + ")" }} ></button>
                                     <button onClick={stickerRight}><i class="fas fa-arrow-right"></i></button>
                                 </div>
                                 <button onClick={stickerDown} ><i class="fas fa-arrow-down"></i></button>
@@ -171,7 +210,10 @@ export default function Car_Show() {
                             <label class="cube"  style={{background:'#383837'}} ><input type="radio" class="radioColor" value="1" name="color"/></label>
                             <label class="cube"  style={{background:'#ed3c3a'}} ><input type="radio" class="radioColor" value="2" name="color"/></label>
                             <label class="cube"  style={{background:'#ce533c'}} ><input type="radio" class="radioColor" value="33" name="color"/></label>
+                            <label class="cube"  style={{background:'#a18460'}} ><input type="radio" class="radioColor" value="60" name="color"/></label>
                             <label class="cube"  style={{background:'#447433'}} ><input type="radio" class="radioColor" value="84" name="color"/></label>
+                            <label class="cube"  style={{background:'#5da08c'}} ><input type="radio" class="radioColor" value="172" name="color"/></label>
+                            <label class="cube"  style={{background:' #408085'}} ><input type="radio" class="radioColor" value="182" name="color"/></label>
                             <label class="cube"  style={{background:' #3675c7'}} ><input type="radio" class="radioColor" value="208" name="color"/></label>
                             <label class="cube" style={{background:'#9045de'}} ><input type="radio" class="radioColor" value="272" name="color"/></label>
                             <label class="cube"  style={{background:'#b839da'}} ><input type="radio" class="radioColor" value="289" name="color"/></label>
@@ -180,37 +222,37 @@ export default function Car_Show() {
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <h1>BMW Z3</h1>
+                    <h1>{carspec[router.query.id].name}</h1>
 
                     <div>
-                        <small><b>Year</b></small>
-                        <p>2018</p>
+                        <small><b>سنة الصنع</b></small>
+                        <p>{carspec[router.query.id].model}</p>
                     </div>
 
                     <div>
-                        <small><b>Engine size</b></small>
-                        <p>500CC</p>
+                        <small><b>سعة المحرك</b></small>
+                        <p>{carspec[router.query.id].engine}</p>
                     </div>
 
                     <div>
-                        <small><b>Fuel</b></small>
-                        <p>Disel</p>
+                        <small><b>عدد الاحصنة</b></small>
+                        <p>{carspec[router.query.id].hourcePower}</p>
                     </div>
 
                     <div>
-                        <small><b>Passnger</b></small>
-                        <p>4 People</p>
+                        <small><b>عدد الركاب</b></small>
+                        <p>اربعة اشخاص </p>
                     </div>
                     
                     <div class="car-price border p-3">
-                        <p class="d-flex justify-content-between mb-2">Car <span>20,000 JOD</span></p>
-                        <p class="d-flex justify-content-between mb-2">Paint <span>500 JOD</span></p>
-                        <p class="d-flex justify-content-between mb-2">Sticker <span>300 JOD</span></p>
-                        <p class="d-flex justify-content-between mb-3 pb-3 border-bottom">Tax <span>800 JOD</span></p>
-                        <p class="d-flex justify-content-between mb-2">Total Price</p>
-                        <h2>21,600 JOD</h2>
+                        <p class="d-flex justify-content-between mb-2">سعر <span>{carspec[router.query.id].price}</span></p>
+                        <p class="d-flex justify-content-between mb-2">اللون <span>+500 JOD</span></p>
+                        <p class="d-flex justify-content-between mb-2">ستكرز <span>+300 JOD</span></p>
+                        {/* <p class="d-flex justify-content-between mb-3 pb-3 border-bottom">Tax <span>+800 JOD</span></p> */}
+                        <p class="d-flex justify-content-between mb-2">المجموع</p>
+                        <h2 >{totle+' دينار'}</h2>
                         <div class="d-flex justify-content-end">
-                            <button type="submit" class="btn">CHECKOUT</button>
+                            <button type="submit" class="btn">اشتري</button>
                         </div>
                     </div>
 

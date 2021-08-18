@@ -2,7 +2,12 @@
 import React from "react"
 import Link from 'next/link'
 import Header from '../components/Header'
+import carspec from './ojects'
+
 export default function ForSellNew() {
+    
+
+
     return (
     
 <React.Fragment>
@@ -16,7 +21,8 @@ export default function ForSellNew() {
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"/>
             <link rel="stylesheet" href="assets/css/app.css"/>
         </head>
-        <body>
+        <body style={{direction: 'rtl'}}>
+            <Header/>
             {/* <header>
                 <a class="brand" href="#">HOT WHEELS</a>
                 <ul>
@@ -25,10 +31,10 @@ export default function ForSellNew() {
                     <a href="#">CONTACT</a>
                 </ul>
             </header> */}
-                 <header class="siteHeader " style={{position:'unset',direction:'rtl' , margin:'0',width:'100%',display:'block'}}>
+                 {/* <header class="siteHeader " style={{position:'unset',direction:'rtl' , margin:'0',width:'100%',display:'block'}}>
             <div class=" innerHdr" style={{justifyContent:'space-between'}}>
                 <span style={{flexGrow:'1'}}><a href="/"><img src="" alt="" /></a></span>
-                {/* for logo  */}
+        
                 <ul style={{marginLeft: '-58%',marginBottom:'0',flexGrow:'1'}}>
                     <li>
                     <Link href="/">
@@ -50,88 +56,36 @@ export default function ForSellNew() {
                     </li>
                     </ul>
             </div>
-        </header>
+        </header> */}
                  {/* <Header/> */}
             <section id="intro">
-                <h2>welcome TO</h2>
-                <h1>HOT WHEELS</h1>
+                <h2>اهلا بك في</h2>
+                <h1>سيارتك</h1>
                 <div class="car-intro">
                     <img class="back-wheel" src="assets/images/wheel-back.png" alt=""/>
                     <img class="front-wheel" src="assets/images/wheel-back.png" alt=""/>
                 </div>
-                <a class="btn" href="#market" type="submit">JOIN US</a>
+                <a class="btn" href="#market" type="submit">انضم الينا</a>
             </section>
             <section id="market">
                 <div class="container">
-                    <h1>MARKET PLACE</h1>
+                    <h1>اختر سيارتك الجديدة </h1>
                     <div class="row">
+                    {carspec.map((car,index) => (
                         <div class="col-12 col-sm-6 col-lg-4">
                             <div class="card">
-                                <div class="market-thumbnail" style={{backgroundImage:"url(" + "/assets/images/cars/acura-tlx-front.png" + ")" ,backgroundRepeat: 'no-repeat'}}></div>
-                                <div class="market-carname">acura-tlx</div>
+                                <div class="market-thumbnail" style={{backgroundImage: `url(./assets/images/cars/${carspec[index].slug}-front.png)` ,backgroundRepeat: 'no-repeat'}}></div>
+                                <div class="market-carname">{car.name}</div>
                                 <small class="market-year">2021</small>
-                                <div class="price">20,000 JOD</div>
-                                <Link href="/car_show">
-                                <a class="market-buy btn" href="/car_show">View vehicle</a>
-                    </Link>
-                               
+                                <div class="price">{car.price}JOD</div>
+                                {/* <Link href={"/car_show?"+index} params={{id:index}}> */}
+                                <Link  href={{ pathname: "/car_show", query: { id: index } }}>
+
+                                <a class="market-buy btn" href="/car_show">شاهد سيارة</a>
+                                </Link>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="card">
-                                <div class="market-thumbnail"  style={{backgroundImage:"url(" + "assets/images/cars/acura-tlx-front.png" + ")" ,backgroundRepeat: 'no-repeat'}}></div>
-                                <div class="market-carname">acura-tlx</div>
-                                <small class="market-year">2021</small>
-                                <div class="price">20,000 JOD</div>
-                                      <Link href="/car_show">
-                                <a class="market-buy btn" href="/car_show">View vehicle</a>
-                    </Link>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="card">
-                                <div class="market-thumbnail" style={{backgroundImage:"url(" + "assets/images/cars/acura-tlx-front.png" + ")" ,backgroundRepeat: 'no-repeat'}}></div>
-                                <div class="market-carname">acura-tlx</div>
-                                <small class="market-year">2021</small>
-                                <div class="price">20,000 JOD</div>
-                                      <Link href="/car_show">
-                                <a class="market-buy btn" href="/car_show">View vehicle</a>
-                    </Link>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="card">
-                                <div class="market-thumbnail" style={{backgroundImage:"url(" + "assets/images/cars/acura-tlx-front.png" + ")" ,backgroundRepeat: 'no-repeat'}}></div>
-                                <div class="market-carname">acura-tlx</div>
-                                <small class="market-year">2021</small>
-                                <div class="price">20,000 JOD</div>
-                                      <Link href="/car_show">
-                                <a class="market-buy btn" href="/car_show">View vehicle</a>
-                    </Link>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="card">
-                                <div class="market-thumbnail" style={{backgroundImage:"url(" + "assets/images/cars/acura-tlx-front.png" + ")" ,backgroundRepeat: 'no-repeat'}}></div>
-                                <div class="market-carname">acura-tlx</div>
-                                <small class="market-year">2021</small>
-                                <div class="price">20,000 JOD</div>
-                                      <Link href="/car_show">
-                                <a class="market-buy btn" href="/car_show">View vehicle</a>
-                    </Link>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="card">
-                                <div class="market-thumbnail" style={{backgroundImage:"url(" + "assets/images/cars/acura-tlx-front.png" + ")" ,backgroundRepeat: 'no-repeat'}}></div>
-                                <div class="market-carname">acura-tlx</div>
-                                <small class="market-year">2021</small>
-                                <div class="price">20,000 JOD</div>
-                                      <Link href="/car_show">
-                                <a class="market-buy btn" href="/car_show">View vehicle</a>
-                    </Link>
-                            </div>
-                        </div>
+                    ))}
                     </div>
                 </div>
             </section>

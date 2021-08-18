@@ -709,13 +709,14 @@ button:hover {
     grid-column-start:2;
     border-radius: 4px;
     box-sizing: border-box;
-    margin-top: 3%;
+    /* margin-top: 3%; */
 
    
   }
   
   .divv input[type=submit ] {
-    grid-column-start:2;
+    grid-column-start:1;
+    grid-column-end:3;
 
     width: 100%;
     background-color: #046582;
@@ -733,7 +734,7 @@ button:hover {
     grid-column-start:2;
     border-radius: 4px;
     box-sizing: border-box;
-    margin-top: 3%;
+    /* margin-top: 3%; */
   }
   .divv input[type=submit]:hover {
     grid-column-start:2;
@@ -757,6 +758,7 @@ button:hover {
     display:grid ;
     grid-template-columns:  auto 70% ;
     padding: 5%;
+    grid-gap: 4px;
 }
 
 

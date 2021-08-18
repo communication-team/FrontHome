@@ -7,13 +7,36 @@ import axios from 'axios'
 import { app } from "../base";
 import Footer from '../components/Footer'
 import Head2 from '../components/Head2'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function CreatePost() {
+  const notifyError = () => 
+     toast.error("Your Data Has Not Been Saved Try Later ! ", {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    });
+  const notifysuccess = () =>
+    
 
+    toast.success("Your Data Has Been Saved  ! ", {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    });
     const db = app.firestore();
   
     useEffect(() => {
 
-       
+    
 
 if(!window.localStorage.info)
 {
@@ -104,10 +127,11 @@ if(!window.localStorage.info)
         axios.post('https://carsgallary.herokuapp.com/api/v1/cars/carinfo/create/', formData, config
         ).then(function (response) {
 
+          notifysuccess()
             console.log(response)
-            alert("dd")
-
+            
         }).catch(function (error) {
+          notifyError()
             console.log(error)
         });
 
@@ -231,7 +255,17 @@ async function onImgChangePrimary(e)
     return (
     
 <React.Fragment>
-        
+<ToastContainer
+position="top-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+/>
         <html lang="en">
         {/* <head>
             <meta charset="UTF-8"/>
@@ -339,7 +373,7 @@ async function onImgChangePrimary(e)
     <label for="year">سنة الصنع</label>
     <input type="number" id="year" name="year" placeholder="سنة الصنع.." onChange={(e)=>setYear(e.target.value)} value={year}/> 
     <label for="color"> اللون</label>
-    <input type="text" id="color" name="color" placeholder="car color.." onChange={(e)=>setColor(e.target.value)} value={color}/> 
+    <input type="text" id="color" name="color" placeholder="لون السيارة .." onChange={(e)=>setColor(e.target.value)} value={color}/> 
     <label for="transmission"> نوع ناقل الحركة</label>
     <select id="brand" name="ناقل" onChange={(e)=>setTra(e.target.value)} >
       <option value="اتوماتك  "> اتوماتك</option>
@@ -352,7 +386,7 @@ async function onImgChangePrimary(e)
     <label for="fuel"> نوع الوقود</label>
     <input type="text" id="fuel" name="fuel" placeholder="بنزين ولا سولار .." onChange={(e)=>setFule(e.target.value)} value={fule}/>
     <label for="engine"> سعة المحرك</label>
-    <input type="number" id="engine" name="engine" placeholder="1.6 لتر.." onChange={(e)=>setCc(e.target.value)} value={cc} />
+    <input type="number" id="engine" name="engine" placeholder="2000 cc .." onChange={(e)=>setCc(e.target.value)} value={cc} />
     <label for="status"> الحالة</label>
     <select id="brand" name="الحالة" onChange={(e)=>setStat(e.target.value)} >
       <option value="جديد  "> جديد</option>
@@ -402,19 +436,67 @@ async function onImgChangePrimary(e)
     
     
     
-    <label for="image"> اضافة صورة الرئيسية</label>
-    <input  type="file"  name="imagesArray" onChange={onImgChangePrimary}  accept="image/*" name="image" id="file" ></input>
-    <label for="image">  اضافة صورة جانبية</label>
-    <input  type="file"  name="imagesArray" onChange={onImgChange1}  accept="image/*" name="image1" id="file1" ></input>
-    <label for="image">اضافة صورة جانبية</label>
-    <input  type="file"  name="imagesArray" onChange={onImgChange2}  accept="image/*" name="image2" id="file2" ></input>
-    <label for="image">اضافة صورة جانبية</label>
-    <input  type="file"  name="imagesArray" onChange={onImgChange3}  accept="image/*" name="image3" id="file3" ></input>
-    <label for="image">اضافة صورة جانبية</label>
-    <input  type="file"  name="imagesArray" onChange={onImgChange4}  accept="image/*" name="image4" id="file4" ></input>
+    <label for="file" style={{ backgroundColor: '#4caf50',margin:'0',
+      color: 'white',
+      padding: '0.5rem',
+      textAlign: 'center',
+      borderRadius: '0.3rem',
+      cursor: 'pointer',
+      marginTop: '1rem',
+      gridColumnStart: '1',
+    gridColumnEnd: '3'}}> اضافة صورة الرئيسية</label>
+    <input  type="file"  name="imagesArray" onChange={onImgChangePrimary}  accept="image/*" name="image" id="file" hidden/>
+    <label for="file1" style={{ backgroundColor: '#4caf50',margin:'0',
+      color: 'white',
+      padding: '0.5rem',
+      textAlign: 'center',
+      borderRadius: '0.3rem',
+      cursor: 'pointer',
+      marginTop: '1rem',
+      gridColumnStart: '1',
+    gridColumnEnd: '3'}}>  اضافة صورة جانبية</label>
+    <input  type="file"  name="imagesArray" onChange={onImgChange1}  accept="image/*" name="image1" id="file1" hidden></input>
+    <label for="file2" style={{ backgroundColor: '#4caf50',margin:'0',
+      color: 'white',
+      padding: '0.5rem',
+      textAlign: 'center',
+      borderRadius: '0.3rem',
+      cursor: 'pointer',
+      marginTop: '1rem',
+      gridColumnStart: '1',
+    gridColumnEnd: '3'}}>اضافة صورة جانبية</label>
+    <input  type="file"  name="imagesArray" onChange={onImgChange2}  accept="image/*" name="image2" id="file2" hidden />
+
+    <label for="file3" style={{ backgroundColor: '#4caf50',margin:'0',
+      color: 'white',
+      padding: '0.5rem',
+      textAlign: 'center',
+      borderRadius: '0.3rem',
+      cursor: 'pointer',
+      marginTop: '1rem',
+      gridColumnStart: '1',
+    gridColumnEnd: '3'}}>اضافة صورة جانبية</label>
+    <input  type="file"  name="imagesArray" onChange={onImgChange3}  accept="image/*" name="image3" id="file3" hidden/>
+    <label for="file4"   style={{ backgroundColor: '#4caf50',margin:'0',
+      color: 'white',
+      padding: '0.5rem',
+      textAlign: 'center',
+      borderRadius: '0.3rem',
+      cursor: 'pointer',
+      marginTop: '1rem',
+      gridColumnStart: '1',
+    gridColumnEnd: '3'}}>اضافة صورة جانبية</label>
+    <input  type="file"  name="imagesArray" onChange={onImgChange4}  accept="image/*" name="image4" id="file4"
+    
+  
+    hidden/>
+   
+   
    
     
-    <input type="submit" value="Submit"/>
+    <input type="submit" value="Submit" style={{ 
+      gridColumnStart: '1',
+    gridColumnEnd: '3'}}/>
   </form>
 </div>
 <div id='footerNeedPadding'>

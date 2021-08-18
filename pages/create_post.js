@@ -101,7 +101,7 @@ if(!window.localStorage.info)
         formData.append("transmission", tra);
         formData.append("cylinder", cy);
         formData.append("engine_size", cc);
-        formData.append("status", stat);
+        formData.append("status", "مستعمل");
         formData.append("documents", trkh);
         formData.append("insurance", insure);
         formData.append("km", km);
@@ -177,6 +177,7 @@ if(!window.localStorage.info)
 async function onImgChangePrimary(e)
     {
         const file = e.target.files[0];
+        if(!file) return;
         const storageRef = app.storage().ref();
         const fileRef = storageRef.child(file.name);
         await fileRef.put(file);
@@ -193,6 +194,7 @@ async function onImgChangePrimary(e)
         
         // setImage1(event.target.files[0])
         const file = e.target.files[0];
+        if(!file) return;
         const storageRef = app.storage().ref();
         const fileRef = storageRef.child(file.name);
         await fileRef.put(file);
@@ -209,6 +211,7 @@ async function onImgChangePrimary(e)
     {
         
         const file = e.target.files[0];
+        if(!file) return;
         const storageRef = app.storage().ref();
         const fileRef = storageRef.child(file.name);
         await fileRef.put(file);
@@ -224,6 +227,7 @@ async function onImgChangePrimary(e)
     async   function onImgChange3(e)
     {
         const file = e.target.files[0];
+        if(!file) return;
         const storageRef = app.storage().ref();
         const fileRef = storageRef.child(file.name);
         await fileRef.put(file);
@@ -239,6 +243,7 @@ async function onImgChangePrimary(e)
     async  function onImgChange4(e)
     {
         const file = e.target.files[0];
+        if(!file) return;
         const storageRef = app.storage().ref();
         const fileRef = storageRef.child(file.name);
         await fileRef.put(file);
@@ -374,7 +379,8 @@ pauseOnHover
     <input type="text" id="color" name="color" placeholder="لون السيارة .." onChange={(e)=>setColor(e.target.value)} value={color}/> 
     <label htmlFor="transmission"> نوع ناقل الحركة</label>
     <select id="brand" name="ناقل" onChange={(e)=>setTra(e.target.value)} >
-      <option value="اتوماتك  "> اتوماتك</option>
+    <option value='' selected hidden>ناقل</option>
+      <option value="اتوماتك  ">اتوماتك</option>
       <option value="يدوي">يدوي</option>
 
 
@@ -385,17 +391,18 @@ pauseOnHover
     <input type="text" id="fuel" name="fuel" placeholder="بنزين ولا سولار .." onChange={(e)=>setFule(e.target.value)} value={fule}/>
     <label htmlFor="engine"> سعة المحرك</label>
     <input type="number" id="engine" name="engine" placeholder="2000 cc .." onChange={(e)=>setCc(e.target.value)} value={cc} />
-    <label htmlFor="status"> الحالة</label>
+    {/* <label htmlFor="status"> الحالة</label>
     <select id="brand" name="الحالة" onChange={(e)=>setStat(e.target.value)} >
-      <option value="جديد  "> جديد</option>
+      <option value="جديد  ">جديد</option>
       <option value="مستعمل">مستعمل</option>
 
 
-    </select>
+    </select> */}
     <label htmlFor="Insurance"> التامين</label>
    
     <select id="brand" name="التامين" onChange={(e)=>setInsure(e.target.value)}>
-      <option value="مؤمنه  "> مؤمنه</option>
+    <option value='' selected hidden>التامين</option>
+      <option value="مؤمنه  ">مؤمنه</option>
       <option value="غير مؤمنه">غير مؤمنه</option>
 
       
@@ -404,7 +411,8 @@ pauseOnHover
     </select>
     <label htmlFor="Insurance"> الترخيص</label>
     <select id="brand" name="الترخيص" onChange={(e)=>setTrkh(e.target.value)}>
-      <option value="مرخصة  "> مرخصة</option>
+    <option value='' selected hidden>الترخيص</option>
+      <option value="مرخصة  ">مرخصة</option>
       <option value="غير مرخصه">غير مرخصه</option>
 
       
@@ -420,8 +428,8 @@ pauseOnHover
     <label htmlFor="location"> الموقع</label>
     <select id="brand" name="الموقع" onChange={(e)=>setLocation(e.target.value)}>
 
-
-      <option value="عمان  "> عمان</option>
+<option value='' selected hidden>الموقع</option>
+     <option value="عمان">عمان</option>
       <option value="البلقاء">البلقاء</option>
       <option value="الزرقاء">الزرقاء</option>
       <option value="الطفيله">الطفيله</option>

@@ -68,8 +68,8 @@ export default function Header (props) {
                     </li>: <li className="sellCarNewBtn hideBtn" onClick={logout}>
 
                         
-                        <Link href="/" className="redBtn" style={{textAlign: 'center'}}>
-                        <a className="redBtn">
+                        <Link href="/" className="redBtn" >
+                        <a className="redBtn" style={{textAlign: 'center'}}>
                 <i className="fas fa-user" id='userIcone'></i>
                     {info}
                     <br/>

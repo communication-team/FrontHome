@@ -1,6 +1,8 @@
 import Link from 'next/link'
+
 import  { useState, useEffect } from 'react'
-export default function HeaderDetail(props){
+export default function Header (props) {
+
     const [info, setInfo] = useState('');
 
     
@@ -22,7 +24,7 @@ export default function HeaderDetail(props){
   }
     return(
         <header className="siteHeader " style={{margin:"0"}}>
-        <div className="container innerHdr">
+        <div className=" innerHdr">
            {/* <span><a href="/" ><img src="https://syarahcdn.syarah.com/syarah/bundles/logo.svg" alt="" /></a></span> */}
            <span>
            <Link href="/">
@@ -33,7 +35,12 @@ export default function HeaderDetail(props){
                 
                 </Link></span>
             {/* for logo  */}
-            <ul>
+            <ul style={{
+    width: '42%',
+    fontSize: '143%',
+    fontFamily: 'Changa,sans-serif',
+    justifyContent: 'space-between'
+}}>
                 <li>
                 <Link href="/">
                     <a>الصفحة الرئيسية </a>
@@ -66,7 +73,7 @@ export default function HeaderDetail(props){
                     </li>: <li className="sellCarNewBtn hideBtn" onClick={logout}>
 
                         
-                        <Link href="/" className="redBtn" style={{textAlign: 'center'}}>
+                        <Link href="/" className="redBtn" >
                         <a className="redBtn" style={{textAlign: 'center'}}>
                 <i className="fas fa-user" id='userIcone'></i>
                     {info}
@@ -83,48 +90,4 @@ export default function HeaderDetail(props){
         </div>
     </header>
     );
-    // return(
-
-        
-    //     <header className="siteHeader ">
-    //         <div className="container innerHdr">
-    //                         <span>
-    //                             <a href="/">
-    //                             {/* <img src="https://syarahcdn.syarah.com/syarah/bundles/logo.svg" alt="" /> */}
-    //                             </a>
-    //                         </span>
-    //                         <ul>
-    //                 <li>
-    //                 <Link href="/">
-    //                     <a>الصفحة الرئيسية </a>
-    //                 </Link>
-    //                 </li>
-    //                 <li>
-    //                     <Link href='/forsellnew'>
-    //                     <a>سيارات جديدة </a>
-    //                     </Link>
-    //                 </li>
-    //                 <li>
-    //                     <Link href="/forsellused">
-    //                     <a>سيارات مستعملة </a>
-    //                     </Link>
-    //                 </li>
-    //                 <li className="sellCarNewBtn hideBtn">
-    //                     <a href="/create_post" className="redBtn">اعرض سيارتك للبيع</a>
-    //                 </li>
-    //                 <li className="sellCarNewBtn hideBtn"><a href="/login" className="redBtn">
-    //                 <i className="fas fa-user" id='userIcone'></i>
-    //                     اسم المتسخدم 
-    //                     </a>
-    //                 </li>
-    //                 <li className="sellCarNewBtn hideBtn"><a href="/login" className="redBtn">
-    //                     تسجيل دخول 
-    //                     </a>
-    //                     </li>
-    //                 </ul>
-    //         </div>
-    //     </header>
-  
-
-    // )
 }

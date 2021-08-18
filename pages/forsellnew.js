@@ -1,7 +1,7 @@
 
 import React from "react"
 import Link from 'next/link'
-import Header from '../components/Header'
+import Header from '../components/HeaderNew'
 import carspec from '../components/ojects'
 import Footer from '../components/Footer'
 export default function ForSellNew() {
@@ -49,7 +49,7 @@ export default function ForSellNew() {
                                 <div className="market-thumbnail" style={{backgroundImage: `url(./assets/images/cars/${carspec[index].slug}-front.png)` ,backgroundRepeat: 'no-repeat'}}></div>
                                 <div className="market-carname">{car.name}</div>
                                 <small className="market-year">2021</small>
-                                <div className="price">{car.price}JOD</div>
+                                <div className="price">{car.price + ' دينار'}</div>
                                 {/* <Link href={"/car_show?"+index} params={{id:index}}> */}
                                 <Link  href={{ pathname: "/car_show", query: { id: index } }}>
 

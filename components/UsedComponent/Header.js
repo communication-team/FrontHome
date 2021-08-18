@@ -69,7 +69,7 @@ export default function HeaderUsed (props) {
 
                             
                             <Link href="/" className="redBtn" style={{textAlign: 'center'}}>
-                            <a className="redBtn">
+                            <a className="redBtn" style={{textAlign: 'center'}}>
                     <i className="fas fa-user" id='userIcone'></i>
                         {info}
                         <br/>

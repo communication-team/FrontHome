@@ -387,7 +387,7 @@ pauseOnHover
     <input type="text" id="color" name="color" placeholder="لون السيارة .." onChange={(e)=>setColor(e.target.value)} value={color}/> 
     <label for="transmission"> نوع ناقل الحركة</label>
     <select id="brand" name="ناقل" onChange={(e)=>setTra(e.target.value)} >
-      <option value="اتوماتك  "> اتوماتك</option>
+      <option value="اتوماتك  ">اتوماتك</option>
       <option value="يدوي">يدوي</option>
 
 

@@ -2,7 +2,7 @@ export default function SearchByMakeContainer(props) {
     return(
         <section class="searchByMakeContainer">
             <div class="container">
-                <h1 class="big">تصفح السيارت حسب الماركة</h1>
+                <h1 class="big">ابرز الماركات المتوفرة</h1>
                 <div class="makesWithLogo">
                     <a class="singleLogoMake" href="/post/search?is_online=0&amp;make_id=4">
                         <div class="make_4">

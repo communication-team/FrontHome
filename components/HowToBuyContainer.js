@@ -6,11 +6,11 @@ export default function HowToBuyContainer(props) {
             <div class="toggleImagesContainer">
                 <ul styles="transform: translate(0px, 0px);">
                     <li class="readMe ">
-                        <strong>1</strong><span>إبحث عن السيارة اللي تبيها</span>
+                        <strong>1</strong><span>إبحث عن السيارة المناسبة</span>
                         <img class="m-show" src="https://syarahcdn.syarah.com/syarah/bundles/h1.png" alt=""/>
                     </li>
                     <li>
-                        <strong>2</strong><span>تواصل مع البايع </span>
+                        <strong>2</strong><span>تواصل مع البائع </span>
                         <img class="m-show" src="https://syarahcdn.syarah.com/syarah/bundles/h2.png" alt=""/>
                     </li>
                     <li>

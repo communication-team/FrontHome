@@ -7,15 +7,14 @@ export default function Container1(props){
             <div class="container" style={{lineHeight:'3rem'}}>
                 <div class="section1Content">
                     <h1>
-                        <span >اشتري سيارتك  </span>
-                        {/* <br /> */}
-                        <span>من </span>
-                        {/* <br /> */}
+                        <span > اشتري سيارتك من  </span>
                         <strong>سيارتك</strong>
                     </h1>
                     <p>جديد أو مستعمل</p>
                 </div>
-                <Image class="m-hide" src={audi_Container1} alt="audi_Container1" />
+                <div id='imageContainer'>
+                <Image class="m-hide" styles={{width:'50%'}} src={audi_Container1} alt="audi_Container1" />
+                </div>
             </div>
         </section>
     );

@@ -19,17 +19,16 @@ export default function OurServices(props) {
                                 </div>
                         </div>
                         <h3>تشكيلة منوعة للسيارات المتسعملة </h3><p>تصفح من بيتك </p>
-                        <a class="whtBtn" href="/post/search?is_online=1">القي نظرة, تصفح </a>
+                        <a class="whtBtn" href="/forsellnew">القي نظرة, تصفح </a>
                     </div>
                     <div class="singleService">
                         <div>
                             <div>
                                     <img src="https://syarahcdn.syarah.com/syarah/bundles/s2.png" alt=""/>
-                                    {/* <img src="https://syarahcdn.syarah.com/syarah/bundles/s2.png" alt=""/> */}
                             </div>
                         </div>
                             <h3>سيارات المعارض</h3><p>تحب تشوف السيارة بعينك؟ تفضل على المعرض </p>
-                                <a class="whtBtn" href="/post/search?is_online=0">تصفح حراج السيارات الجديدة </a>
+                                <a class="whtBtn" href="/forsellused">تصفح حراج السيارات الجديدة </a>
                         </div>
                     </div>
                 </div>

@@ -15,7 +15,7 @@ export default function ColumnContainerDetail(props){
             <div class="contaictButtons">
                 <a class="whPV blueBtn" href="tel:+966505456784">
                 <img width="24" src="https://syarahcdn.syarah.com/syarah/bundles/Call.svg" alt=""/>{props.info.phone}</a>
-                <a style ={{direction:'ltr'}}class="whPV greenBtn" href="https://api.whatsapp.com/send?phone=966505456784">
+                <a style ={{direction:'ltr'}}class="whPV greenBtn" href={"https://api.whatsapp.com/send?phone=+962"+props.info.phone}>
                 <img width="24" src="https://syarahcdn.syarah.com/syarah/bundles/wpImg.svg" alt=""/>واتساب</a>
             </div>
             <div class="sellerInfo">

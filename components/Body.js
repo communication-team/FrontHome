@@ -16,7 +16,7 @@ export default function AllBody(props) {
       width="0"
       styles={{ display: "none", visibility: "hidden" }}></iframe>
       </noscript>
-      <div id="root"><div class="hasAuthPad">
+      <div id="root"><div className="hasAuthPad">
         <Header/>
         <Main/>
         <Footer/>

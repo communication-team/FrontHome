@@ -12,7 +12,7 @@ import SideMenu from "./SideMenu"
 
 export default function Body(props) {
     return(
-            <main class="">
+            <main className="">
                 {/* <SideMenu/> */}
                 <Container1/>
                 {/* <Container2/> */}

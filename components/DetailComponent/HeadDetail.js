@@ -161,7 +161,7 @@ export default function HeadDeatil(props){
 
 {/* <link href="https://fonts.googleapis.com/css?family=Cairo:400,700,900" rel="stylesheet" /> */}
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
 <link href="https://fonts.googleapis.com/css2?family=Changa&display=swap" rel="stylesheet"></link>
 <script type="text/jsx" async="" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
 <script>
@@ -190,7 +190,7 @@ export default function HeadDeatil(props){
 <link rel="stylesheet" href="targetPage/New folder/static/css/detail.css"/>
 {/* <link rel="stylesheet" href="targetPage/New folder/static/css/detail.css"> */}
 
-<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossOrigin="anonymous"/>
 
 <script>
   {script7()}

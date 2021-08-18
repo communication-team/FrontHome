@@ -269,17 +269,17 @@ pauseOnHover
         <html lang="en">
         {/* <head>
             <meta charset="UTF-8"/>
-            <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+            <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
             <title>Document</title>
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"/>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossOrigin="anonymous"/>
 
         </head> */}
         <Head2/>
             <link rel="stylesheet" href="assets/css/app.css"/>
         <body dir="rtl">
             {/* <header>
-                <a class="brand" href="#">HOT WHEELS</a>
+                <a className="brand" href="#">HOT WHEELS</a>
                 <ul>
                     <a href="#">HOMEPAGE</a>
                     <a href="#">ABOUT</a>
@@ -288,11 +288,11 @@ pauseOnHover
             </header> */}
                  <Header/>
         
-            <main class="">
-        <div class="sellCarContainer">
-    <div class="container">
+            <main className="">
+        <div className="sellCarContainer">
+    <div className="container">
         <div>
-            <div class="rightSideSellCar">
+            <div className="rightSideSellCar">
                 <h1>اعرض سيارتك للبيع في اكبر سوق سيارات في المملكة</h1>
                 <p>اعرض سيارتك على آلاف المشترين وتواصل معهم بسهولة</p>
                 </div>
@@ -306,18 +306,18 @@ pauseOnHover
 <br></br>
 <br></br>
 
-<div class="divv">
+<div className="divv">
   <form action="" onSubmit={saveData}>
-  <label for="fname"> عنوان المنشور</label>
+  <label htmlFor="fname"> عنوان المنشور</label>
     <input type="text" id="title" name="title" placeholder="اودي 97 .."  onChange={(e)=>setTitle(e.target.value)} value={title}/> 
-    <label for="fname"> ألاسم</label>
+    <label htmlFor="fname"> ألاسم</label>
     <input type="text" id="name" name="name" placeholder="اسم البائع.." onChange={(e)=>setName(e.target.value)} value={name}/>
-    <label for="lname">رقم الهاتف</label>
+    <label htmlFor="lname">رقم الهاتف</label>
     <input type="number" id="phone" name="phone" placeholder="+9627.." onChange={(e)=>setPhone(e.target.value)} value={phone}/>
-    <label for="fname"> موديل السيارة</label>
+    <label htmlFor="fname"> موديل السيارة</label>
     <input type="text" id="model" name="model" placeholder="فئة السيارة.." onChange={(e)=>setBrand(e.target.value)} value={brand}/>
 
-    <label for="country">براند السيارة</label>
+    <label htmlFor="country">براند السيارة</label>
     <select id="brand" name="البراند" onChange={(e)=>setModel(e.target.value)} >
       <option value="هونداي  "> هونداي</option>
       <option value="تويوتا">تويوتا</option>
@@ -368,31 +368,31 @@ pauseOnHover
       <option value="لامبورغيني">لامبورغيني</option>
 
     </select>
-    <label for="year">سنة الصنع</label>
+    <label htmlFor="year">سنة الصنع</label>
     <input type="number" id="year" name="year" placeholder="سنة الصنع.." onChange={(e)=>setYear(e.target.value)} value={year}/> 
-    <label for="color"> اللون</label>
+    <label htmlFor="color"> اللون</label>
     <input type="text" id="color" name="color" placeholder="لون السيارة .." onChange={(e)=>setColor(e.target.value)} value={color}/> 
-    <label for="transmission"> نوع ناقل الحركة</label>
+    <label htmlFor="transmission"> نوع ناقل الحركة</label>
     <select id="brand" name="ناقل" onChange={(e)=>setTra(e.target.value)} >
       <option value="اتوماتك  "> اتوماتك</option>
       <option value="يدوي">يدوي</option>
 
 
     </select>
-    <label for="cylinder"> السلندرات</label>
+    <label htmlFor="cylinder"> السلندرات</label>
     <input type="number" id="cylinder" name="cylinder"  placeholder="كم سيلندر .." onChange={(e)=>setCy(e.target.value)} value={cy} /> 
-    <label for="fuel"> نوع الوقود</label>
+    <label htmlFor="fuel"> نوع الوقود</label>
     <input type="text" id="fuel" name="fuel" placeholder="بنزين ولا سولار .." onChange={(e)=>setFule(e.target.value)} value={fule}/>
-    <label for="engine"> سعة المحرك</label>
+    <label htmlFor="engine"> سعة المحرك</label>
     <input type="number" id="engine" name="engine" placeholder="2000 cc .." onChange={(e)=>setCc(e.target.value)} value={cc} />
-    <label for="status"> الحالة</label>
+    <label htmlFor="status"> الحالة</label>
     <select id="brand" name="الحالة" onChange={(e)=>setStat(e.target.value)} >
       <option value="جديد  "> جديد</option>
       <option value="مستعمل">مستعمل</option>
 
 
     </select>
-    <label for="Insurance"> التامين</label>
+    <label htmlFor="Insurance"> التامين</label>
    
     <select id="brand" name="التامين" onChange={(e)=>setInsure(e.target.value)}>
       <option value="مؤمنه  "> مؤمنه</option>
@@ -402,7 +402,7 @@ pauseOnHover
 
 
     </select>
-    <label for="Insurance"> الترخيص</label>
+    <label htmlFor="Insurance"> الترخيص</label>
     <select id="brand" name="الترخيص" onChange={(e)=>setTrkh(e.target.value)}>
       <option value="مرخصة  "> مرخصة</option>
       <option value="غير مرخصه">غير مرخصه</option>
@@ -411,13 +411,13 @@ pauseOnHover
 
 
     </select>
-    <label for="km"> ممشى</label>
+    <label htmlFor="km"> ممشى</label>
     <input type="number" id="km" name="km" placeholder="كم كيلو متر ماشية .." onChange={(e)=>setKm(e.target.value)} value={km} />
-    <label for="price"> السعر</label>
+    <label htmlFor="price"> السعر</label>
     <input type="number" id="price" name="price" placeholder="السعر.." onChange={(e)=>setPrice(e.target.value)} value={price}/>
-    <label for="Payment type"> طريقة الدفع</label>
+    <label htmlFor="Payment type"> طريقة الدفع</label>
     <input type="text" id="Payment type" name="Payment type" placeholder="اقساط ولا كاش.." onChange={(e)=>setPyment(e.target.value)} value={pyment}/>
-    <label for="location"> الموقع</label>
+    <label htmlFor="location"> الموقع</label>
     <select id="brand" name="الموقع" onChange={(e)=>setLocation(e.target.value)}>
 
 
@@ -434,7 +434,7 @@ pauseOnHover
     
     
     
-    <label for="file" style={{ backgroundColor: '#4caf50',margin:'0',
+    <label htmlFor="file" style={{ backgroundColor: '#4caf50',margin:'0',
       color: 'white',
       padding: '0.5rem',
       textAlign: 'center',
@@ -443,8 +443,8 @@ pauseOnHover
       marginTop: '1rem',
       gridColumnStart: '1',
     gridColumnEnd: '3'}}> اضافة صورة الرئيسية</label>
-    <input  type="file"  name="imagesArray" onChange={onImgChangePrimary}  accept="image/*" name="image" id="file" hidden/>
-    <label for="file1" style={{ backgroundColor: '#4caf50',margin:'0',
+    <input  type="file"   onChange={onImgChangePrimary}  accept="image/*" name="image" id="file" hidden/>
+    <label htmlFor="file1" style={{ backgroundColor: '#4caf50',margin:'0',
       color: 'white',
       padding: '0.5rem',
       textAlign: 'center',
@@ -453,8 +453,8 @@ pauseOnHover
       marginTop: '1rem',
       gridColumnStart: '1',
     gridColumnEnd: '3'}}>  اضافة صورة جانبية</label>
-    <input  type="file"  name="imagesArray" onChange={onImgChange1}  accept="image/*" name="image1" id="file1" hidden></input>
-    <label for="file2" style={{ backgroundColor: '#4caf50',margin:'0',
+    <input  type="file"   onChange={onImgChange1}  accept="image/*" name="image1" id="file1" hidden></input>
+    <label htmlFor="file2" style={{ backgroundColor: '#4caf50',margin:'0',
       color: 'white',
       padding: '0.5rem',
       textAlign: 'center',
@@ -463,9 +463,9 @@ pauseOnHover
       marginTop: '1rem',
       gridColumnStart: '1',
     gridColumnEnd: '3'}}>اضافة صورة جانبية</label>
-    <input  type="file"  name="imagesArray" onChange={onImgChange2}  accept="image/*" name="image2" id="file2" hidden />
+    <input  type="file"   onChange={onImgChange2}  accept="image/*" name="image2" id="file2" hidden />
 
-    <label for="file3" style={{ backgroundColor: '#4caf50',margin:'0',
+    <label htmlFor="file3" style={{ backgroundColor: '#4caf50',margin:'0',
       color: 'white',
       padding: '0.5rem',
       textAlign: 'center',
@@ -474,8 +474,8 @@ pauseOnHover
       marginTop: '1rem',
       gridColumnStart: '1',
     gridColumnEnd: '3'}}>اضافة صورة جانبية</label>
-    <input  type="file"  name="imagesArray" onChange={onImgChange3}  accept="image/*" name="image3" id="file3" hidden/>
-    <label for="file4"   style={{ backgroundColor: '#4caf50',margin:'0',
+    <input  type="file"   onChange={onImgChange3}  accept="image/*" name="image3" id="file3" hidden/>
+    <label htmlFor="file4"   style={{ backgroundColor: '#4caf50',margin:'0',
       color: 'white',
       padding: '0.5rem',
       textAlign: 'center',
@@ -484,7 +484,7 @@ pauseOnHover
       marginTop: '1rem',
       gridColumnStart: '1',
     gridColumnEnd: '3'}}>اضافة صورة جانبية</label>
-    <input  type="file"  name="imagesArray" onChange={onImgChange4}  accept="image/*" name="image4" id="file4"
+    <input  type="file"   onChange={onImgChange4}  accept="image/*" name="image4" id="file4"
     
   
     hidden/>
@@ -504,7 +504,7 @@ pauseOnHover
 
 
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossOrigin="anonymous"></script>
             <script src="./assets/js/app.js"></script>
         </body>
         </html>

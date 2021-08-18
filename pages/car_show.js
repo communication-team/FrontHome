@@ -139,18 +139,18 @@ export default function Car_Show() {
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossOrigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossOrigin="anonymous"/>
     <link rel="stylesheet" href="assets/css/app.css"/>
 </head>
 <body style={{direction: 'rtl'}}>
             <Header/>
 {/* <body>
-<header class="siteHeader " style={{position:'unset',direction:'rtl' , margin:'0',width:'100%',display:'block'}}>
-            <div class=" innerHdr" style={{justifyContent:'space-between'}}>
+<header className="siteHeader " style={{position:'unset',direction:'rtl' , margin:'0',width:'100%',display:'block'}}>
+            <div className=" innerHdr" style={{justifyContent:'space-between'}}>
                 <span style={{flexGrow:'1'}}><a href="/"><img src="" alt="" /></a></span>
                
                 <ul style={{marginLeft: '-58%',marginBottom:'0',flexGrow:'1'}}>
@@ -169,59 +169,59 @@ export default function Car_Show() {
                         <a  style={{color:'rgb(100, 0, 255)'}}>سيارات مستعملة </a>
                         </Link>
                     </li>
-                    <li  class="sellCarNewBtn hideBtn"><a href="/post/add-post" class="redBtn">اعرض سيارتك للبيع</a></li>
-                    <li style={{paddingRight:'2%'}}><span class="sideMenuToggle "><img src="https://syarahcdn.syarah.com/syarah/bundles/menuToggle.svg" alt="" /></span>
+                    <li  className="sellCarNewBtn hideBtn"><a href="/post/add-post" className="redBtn">اعرض سيارتك للبيع</a></li>
+                    <li style={{paddingRight:'2%'}}><span className="sideMenuToggle "><img src="https://syarahcdn.syarah.com/syarah/bundles/menuToggle.svg" alt="" /></span>
                     </li>
                     </ul>
             </div>
         </header> */}
     <section id="car-detail" style={{direction: 'ltr'}}>
-        <div class="container">
-            <div class="row">
+        <div className="container">
+            <div className="row">
                 
-                <div class="col-lg-8">
-                    <div class="car-editor">
+                <div className="col-lg-8">
+                    <div className="car-editor">
                         <div id="preview">
-                            <div class="car-sticker" style={{WebkitMaskImage: "url(" + "./assets/images/cars/" + carspec[router.query.id].slug+ "-side-paint.png" + ")", backgroundImage: "url(" + "./assets/images/stickers/graffit" + stickerNo + ".png" + ")"}}></div>
-                            <div class="car-paint" style={{backgroundImage:"url(" + "./assets/images/cars/" + carspec[router.query.id].slug+ "-side-paint.png" + ")" }}></div>
-                            <div class="car-preview" style={{backgroundImage:"url(" + "./assets/images/cars/" + carspec[router.query.id].slug+ "-side.png" + ")" }} ></div>
+                            <div className="car-sticker" style={{WebkitMaskImage: "url(" + "./assets/images/cars/" + carspec[router.query.id].slug+ "-side-paint.png" + ")", backgroundImage: "url(" + "./assets/images/stickers/graffit" + stickerNo + ".png" + ")"}}></div>
+                            <div className="car-paint" style={{backgroundImage:"url(" + "./assets/images/cars/" + carspec[router.query.id].slug+ "-side-paint.png" + ")" }}></div>
+                            <div className="car-preview" style={{backgroundImage:"url(" + "./assets/images/cars/" + carspec[router.query.id].slug+ "-side.png" + ")" }} ></div>
                         </div>
-                        <div class="preview-buttons">
-                            <button onClick={prevSticker}><i class="fas fa-chevron-left"></i></button>
-                            <button onClick={nextSticker}><i class="fas fa-chevron-right"></i></button>
+                        <div className="preview-buttons">
+                            <button onClick={prevSticker}><i className="fas fa-chevron-left"></i></button>
+                            <button onClick={nextSticker}><i className="fas fa-chevron-right"></i></button>
                         </div>
-                        <div class="sticker-editor d-flex">
-                            <div class="text-center">
-                                <button onClick={stickerUp}><i class="fas fa-arrow-up"></i></button>
-                                <div class="d-flex align-items-center">
-                                    <button onClick={stickerLeft}><i class="fas fa-arrow-left"></i></button>
+                        <div className="sticker-editor d-flex">
+                            <div className="text-center">
+                                <button onClick={stickerUp}><i className="fas fa-arrow-up"></i></button>
+                                <div className="d-flex align-items-center">
+                                    <button onClick={stickerLeft}><i className="fas fa-arrow-left"></i></button>
                                     <button  id="changeSticker" style={{backgroundImage:"url(" + "./assets/images/stickers/graffit" + stickerNo +".png" + ")" }} ></button>
-                                    <button onClick={stickerRight}><i class="fas fa-arrow-right"></i></button>
+                                    <button onClick={stickerRight}><i className="fas fa-arrow-right"></i></button>
                                 </div>
-                                <button onClick={stickerDown} ><i class="fas fa-arrow-down"></i></button>
+                                <button onClick={stickerDown} ><i className="fas fa-arrow-down"></i></button>
                             </div>
                             <div>
-                                <button onClick={sizeUp} class="btn btn-floating"><i class="fas fa-plus"></i></button>
-                                <button onClick={sizedown} class="btn btn-floating"><i class="fas fa-minus"></i></button>
+                                <button onClick={sizeUp} className="btn btn-floating"><i className="fas fa-plus"></i></button>
+                                <button onClick={sizedown} className="btn btn-floating"><i className="fas fa-minus"></i></button>
                             </div>
                         </div>
-                        <div class="cube-paints">
-                            <label class="cube" style={{background:'white'}} ><input type="radio" class="radioColor" value="0" name="color"/></label>
-                            <label class="cube"  style={{background:'#383837'}} ><input type="radio" class="radioColor" value="1" name="color"/></label>
-                            <label class="cube"  style={{background:'#ed3c3a'}} ><input type="radio" class="radioColor" value="2" name="color"/></label>
-                            <label class="cube"  style={{background:'#ce533c'}} ><input type="radio" class="radioColor" value="33" name="color"/></label>
-                            <label class="cube"  style={{background:'#a18460'}} ><input type="radio" class="radioColor" value="60" name="color"/></label>
-                            <label class="cube"  style={{background:'#447433'}} ><input type="radio" class="radioColor" value="84" name="color"/></label>
-                            <label class="cube"  style={{background:'#5da08c'}} ><input type="radio" class="radioColor" value="172" name="color"/></label>
-                            <label class="cube"  style={{background:' #408085'}} ><input type="radio" class="radioColor" value="182" name="color"/></label>
-                            <label class="cube"  style={{background:' #3675c7'}} ><input type="radio" class="radioColor" value="208" name="color"/></label>
-                            <label class="cube" style={{background:'#9045de'}} ><input type="radio" class="radioColor" value="272" name="color"/></label>
-                            <label class="cube"  style={{background:'#b839da'}} ><input type="radio" class="radioColor" value="289" name="color"/></label>
-                            <label class="cube"  style={{background:'#e539b1'}} ><input type="radio" class="radioColor" value="314" name="color"/></label>
+                        <div className="cube-paints">
+                            <label className="cube" style={{background:'white'}} ><input type="radio" className="radioColor" value="0" name="color"/></label>
+                            <label className="cube"  style={{background:'#383837'}} ><input type="radio" className="radioColor" value="1" name="color"/></label>
+                            <label className="cube"  style={{background:'#ed3c3a'}} ><input type="radio" className="radioColor" value="2" name="color"/></label>
+                            <label className="cube"  style={{background:'#ce533c'}} ><input type="radio" className="radioColor" value="33" name="color"/></label>
+                            <label className="cube"  style={{background:'#a18460'}} ><input type="radio" className="radioColor" value="60" name="color"/></label>
+                            <label className="cube"  style={{background:'#447433'}} ><input type="radio" className="radioColor" value="84" name="color"/></label>
+                            <label className="cube"  style={{background:'#5da08c'}} ><input type="radio" className="radioColor" value="172" name="color"/></label>
+                            <label className="cube"  style={{background:' #408085'}} ><input type="radio" className="radioColor" value="182" name="color"/></label>
+                            <label className="cube"  style={{background:' #3675c7'}} ><input type="radio" className="radioColor" value="208" name="color"/></label>
+                            <label className="cube" style={{background:'#9045de'}} ><input type="radio" className="radioColor" value="272" name="color"/></label>
+                            <label className="cube"  style={{background:'#b839da'}} ><input type="radio" className="radioColor" value="289" name="color"/></label>
+                            <label className="cube"  style={{background:'#e539b1'}} ><input type="radio" className="radioColor" value="314" name="color"/></label>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div className="col-lg-4">
                     <h1>{carspec[router.query.id].name}</h1>
 
                     <div>
@@ -244,15 +244,15 @@ export default function Car_Show() {
                         <p>اربعة اشخاص </p>
                     </div>
                     
-                    <div class="car-price border p-3">
-                        <p class="d-flex justify-content-between mb-2">سعر <span>{carspec[router.query.id].price}</span></p>
-                        <p class="d-flex justify-content-between mb-2">اللون <span>+500 JOD</span></p>
-                        <p class="d-flex justify-content-between mb-2">ستكرز <span>+300 JOD</span></p>
-                        {/* <p class="d-flex justify-content-between mb-3 pb-3 border-bottom">Tax <span>+800 JOD</span></p> */}
-                        <p class="d-flex justify-content-between mb-2">المجموع</p>
+                    <div className="car-price border p-3">
+                        <p className="d-flex justify-content-between mb-2">سعر <span>{carspec[router.query.id].price}</span></p>
+                        <p className="d-flex justify-content-between mb-2">اللون <span>+500 JOD</span></p>
+                        <p className="d-flex justify-content-between mb-2">ستكرز <span>+300 JOD</span></p>
+                        {/* <p className="d-flex justify-content-between mb-3 pb-3 border-bottom">Tax <span>+800 JOD</span></p> */}
+                        <p className="d-flex justify-content-between mb-2">المجموع</p>
                         <h2 >{totle+' دينار'}</h2>
-                        <div class="d-flex justify-content-end">
-                            <button type="submit" class="btn">اشتري</button>
+                        <div className="d-flex justify-content-end">
+                            <button type="submit" className="btn">اشتري</button>
                         </div>
                     </div>
 
@@ -263,7 +263,7 @@ export default function Car_Show() {
         </div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossOrigin="anonymous"></script>
     <script src="./assets/js/app.js"></script>
 </body>
 </html>

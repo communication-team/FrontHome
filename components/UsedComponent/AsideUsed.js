@@ -1,13 +1,13 @@
 export default function AsideUsed (props) {
     return(
-        <aside class="menu ">
-      <div class="menuContent">
+        <aside className="menu ">
+      <div className="menuContent">
         <header><span><img src="https://syarahcdn.syarah.com/syarah/bundles/close_gry.svg" /></span><a
             href="https://syarah.com/post/add-post">أعرض سيارتك للبيع</a></header>
-        <div class="menuBody">
-          <section class="logInSection"><a href="https://syarah.com/user/login">تسجيل الدخول</a><a
+        <div className="menuBody">
+          <section className="logInSection"><a href="https://syarah.com/user/login">تسجيل الدخول</a><a
               href="https://syarah.com/user/signup-mobile">إنشاء حساب</a></section>
-          <section class="menuSection">
+          <section className="menuSection">
             <h5>خدماتنا</h5>
             <ul>
               <li><a href="/post/search?is_online=1"><img
@@ -36,7 +36,7 @@ export default function AsideUsed (props) {
               </li>
             </ul>
           </section>
-          <section class="menuSection">
+          <section className="menuSection">
             <h5>حراج السيارات</h5>
             <ul>
               <li><a href="/post/search?is_new=0&amp;is_online=0"><img
@@ -60,7 +60,7 @@ export default function AsideUsed (props) {
               </li>
             </ul>
           </section>
-          <section class="menuSection">
+          <section className="menuSection">
             <h5>موقع سيارة</h5>
             <ul>
               <li><a href="https://syarah.com/دليل_الموقع"><img
@@ -88,10 +88,10 @@ export default function AsideUsed (props) {
               </li>
             </ul>
           </section>
-          <div class="menuFooter"><strong class="greenGrd"><img
+          <div className="menuFooter"><strong className="greenGrd"><img
                 src="https://syarahcdn.syarah.com/syarah/bundles/greenArmor.svg" alt="" /><span>طرق دفع إلكترونية
                 آمنة</span></strong><img src="https://syarahcdn.syarah.com/syarah/bundles/paymentsMenu.png" alt="" />
-            <div class="socialMedia">
+            <div className="socialMedia">
               <h5>تابعنا لتصلك آخر عروض السيارات</h5>
               <ul>
                 <li><a href="https://www.facebook.com/syarah.KSA"><img
@@ -106,18 +106,18 @@ export default function AsideUsed (props) {
                       src="https://syarahcdn.syarah.com/syarah/bundles/Youtube@1.svg" alt="" /></a></li>
               </ul>
             </div>
-            <div class="ftrLinks"><a href="https://syarah.com/site/terms" rel="noopener noreferrer">الأحكام والشروط</a>
+            <div className="ftrLinks"><a href="https://syarah.com/site/terms" rel="noopener noreferrer">الأحكام والشروط</a>
               |
                <a href="https://syarah.com/site/privacy-policy" rel="noopener noreferrer">سياسة الخصوصية</a>
             </div>
           </div>
-          <div class="menuAuthMsg">
-            <div class="authenticationMsg">
-              <div class="container">
+          <div className="menuAuthMsg">
+            <div className="authenticationMsg">
+              <div className="container">
                 <p>شركة موقع سيارة لتقنية المعلومات شركة موثقة لدى وزارة التجارة والاستثمار وبدعم من شركة علم, علم, بسجل
                   تجاري رقم 1010538980</p>
-                <div class="footerWithVat"><a class="vatLink"
-                    href="https://syarahcdn.syarah.com/syarah/bundles/GAZT_VAT_Certificate.pdf" target="_blank"><img
+                <div className="footerWithVat"><a className="vatLink"
+                    href="https://syarahcdn.syarah.com/syarah/bundles/GAZT_VAT_Certificate.pdf" target="_blank" without rel="noreferrer"><img
                       width="30px" src="https://syarahcdn.syarah.com/syarah/bundles/Vat.svg" alt="" /></a><img
                     src="https://syarahcdn.syarah.com/syarah/bundles/saudi_elm.svg" alt="" /></div>
               </div>
@@ -125,7 +125,7 @@ export default function AsideUsed (props) {
           </div>
         </div>
       </div>
-      <div class="bgForMenu"></div>
+      <div className="bgForMenu"></div>
     </aside>
     );
 }

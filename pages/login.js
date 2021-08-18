@@ -357,7 +357,7 @@ pauseOnHover
 />
 
 <ToastContainer />
-            <html lang="ar" dir="rtl" class="">
+            <html lang="ar" dir="rtl" className="">
             <Head2/>
 
                 <body>
@@ -366,68 +366,68 @@ pauseOnHover
                     </div>
                 <link rel="stylesheet" href="../assets/css/app.css" />
                 {/* <link href="static/css/login.css" rel="stylesheet"/> */}
-                    <div  class="container-fluid" style={{ marginTop: '3%' }} >
-                        <div class="container">
+                    <div  className="container-fluid" style={{ marginTop: '3%' }} >
+                        <div className="container">
 
-                            <div   class="content" style={{ display: "flex", flexDirection: "row", justifyContent: 'space-evenly' }}>
+                            <div   className="content" style={{ display: "flex", flexDirection: "row", justifyContent: 'space-evenly' }}>
 
-                                {/* <div class="container" >
-                                        <ul class="breadcrumb">
+                                {/* <div className="container" >
+                                        <ul className="breadcrumb">
                                     </ul>    </div> */}
 
                                 <div style={{ width: '35%' }}>
-                                    <div class="container" >
-                                        <div class="clearfix main_titles_box" style={{ width: '468px' }}>
-                                            <h1 class="pull-right"><span>دخول</span></h1>
+                                    <div className="container" >
+                                        <div className="clearfix main_titles_box" style={{ width: '468px' }}>
+                                            <h1 className="pull-right"><span>دخول</span></h1>
                                         </div>
                                     </div>
 
-                                    <div class="container" >
-                                        <div  class="inner_content sa_forms">
+                                    <div className="container" >
+                                        <div  className="inner_content sa_forms">
                                             <form id="form-login" action="/user/login" method="post" onSubmit={login}>
-                                                <input type="hidden" name="_csrf" class="input" value="CepoTPoD1xCQtfrWfY0pWBhZGn5GY1hppMwJvV55ELBqhQsI10_mVPvXma8s4291awNvOAUiHVHVk0vXEjFA6g==" />
+                                                <input type="hidden" name="_csrf" className="input" value="CepoTPoD1xCQtfrWfY0pWBhZGn5GY1hppMwJvV55ELBqhQsI10_mVPvXma8s4291awNvOAUiHVHVk0vXEjFA6g==" />
                                                 <div>
 
-                                                    <div class="col-lg-12 col-md-12">
+                                                    <div className="col-lg-12 col-md-12">
                                                     </div>
 
                                                 </div>
-                                                <div class="row">
-                                                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 sa_forms_titles">اسم الامستخدم: </div>
-                                                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                                                <div className="row">
+                                                    <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12 sa_forms_titles">اسم الامستخدم: </div>
+                                                    <div className="col-lg-5 col-md-5 col-sm-12 col-xs-12">
 
-                                                        <div class="form-group field-userloginform-phonenumber required">
-                                                            <input style={{ width: '473px' }} class="input" type="text" id="userloginform-phonenumber" class="form-control" onChange={(e) => setLoginuser(e.target.value)} value={loginuser} name="UserLoginForm[phoneNumber]" dir="ltr" aria-required="true" />
+                                                        <div className="form-group field-userloginform-phonenumber required">
+                                                            <input style={{ width: '473px' }}  type="text" id="userloginform-phonenumber" className="form-control input" onChange={(e) => setLoginuser(e.target.value)} value={loginuser} name="UserLoginForm[phoneNumber]" dir="ltr" aria-required="true" />
                                                         </div>                </div>
-                                                    <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12 sa_forms_notes"></div>
+                                                    <div className="col-lg-4 col-md-3 col-sm-12 col-xs-12 sa_forms_notes"></div>
                                                 </div>
-                                                <div class="row">
-                                                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 sa_forms_titles">كلمة السر: </div>
-                                                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                                                <div className="row">
+                                                    <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12 sa_forms_titles">كلمة السر: </div>
+                                                    <div className="col-lg-5 col-md-5 col-sm-12 col-xs-12">
                                                         
 
-                                                            <div class="form-group field-userloginform-password required">
-                                                                <input style={{ width: '473px' }} class="input" type="password" id="userloginform-password" class="form-control" onChange={(e) => setLoginpassword(e.target.value)} value={loginpassword} name="UserLoginForm[password]" dir="ltr" aria-required="true" />
-                                                            </div>                    <div class="input_elements_lft">
-                                                                <button type="button" class="show_password" id="peye"></button>
+                                                            <div className="form-group field-userloginform-password required">
+                                                                <input style={{ width: '473px' }}  type="password" id="userloginform-password" className="form-control input" onChange={(e) => setLoginpassword(e.target.value)} value={loginpassword} name="UserLoginForm[password]" dir="ltr" aria-required="true" />
+                                                            </div>                    <div className="input_elements_lft">
+                                                                <button type="button" className="show_password" id="peye"></button>
                                                             
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12 sa_forms_notes">
+                                                    <div className="col-lg-4 col-md-3 col-sm-12 col-xs-12 sa_forms_notes">
                                                     </div>
                                                 </div>
 
 
 
-                                                <div class="row">
-                                                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 sa_forms_titles"></div>
-                                                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-                                                        <p class="sa_forms_btns">
+                                                <div className="row">
+                                                    <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12 sa_forms_titles"></div>
+                                                    <div className="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                                                        <p className="sa_forms_btns">
 
-                                                            <button type="submit" class="btn btn-primary">دخول</button>
+                                                            <button type="submit" className="btn btn-primary">دخول</button>
                                                         </p>
                                                     </div>
-                                                    <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12 sa_forms_notes"></div>
+                                                    <div className="col-lg-4 col-md-3 col-sm-12 col-xs-12 sa_forms_notes"></div>
                                                 </div>
                                             </form>    </div>
 
@@ -440,48 +440,48 @@ pauseOnHover
 
 
                                 <div  style={{ width: '35%' }}>
-                                    <div class="clearfix main_titles_box" style={{ width: '468px' }}>
-                                        <h1 class="pull-right"><span>تسجيل</span></h1>
+                                    <div className="clearfix main_titles_box" style={{ width: '468px' }}>
+                                        <h1 className="pull-right"><span>تسجيل</span></h1>
                                     </div>
-                                    <div class="inner_content sa_forms">
+                                    <div className="inner_content sa_forms">
                                         <form id="form-login" action="/user/login" method="post" onSubmit={register}>
-                                            <input class="input" type="hidden" name="_csrf" value="CepoTPoD1xCQtfrWfY0pWBhZGn5GY1hppMwJvV55ELBqhQsI10_mVPvXma8s4291awNvOAUiHVHVk0vXEjFA6g==" />
+                                            <input className="input" type="hidden" name="_csrf" value="CepoTPoD1xCQtfrWfY0pWBhZGn5GY1hppMwJvV55ELBqhQsI10_mVPvXma8s4291awNvOAUiHVHVk0vXEjFA6g==" />
                                             <div>
 
-                                                <div class="col-lg-12 col-md-12">
+                                                <div className="col-lg-12 col-md-12">
                                                 </div>
 
                                             </div>
-                                            <div class="row">
-                                                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 sa_forms_titles">اسم المستخدم: </div>
-                                                <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                                            <div className="row">
+                                                <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12 sa_forms_titles">اسم المستخدم: </div>
+                                                <div className="col-lg-5 col-md-5 col-sm-12 col-xs-12">
 
-                                                    <div class="form-group field-userloginform-phonenumber required">
-                                                        <input class="input" type="text" onChange={(e) => setSinguser(e.target.value)} value={singuser} id="userloginform-phonenumber" class="form-control" name="UserLoginForm[phoneNumber]" dir="ltr" aria-required="true" />
+                                                    <div className="form-group field-userloginform-phonenumber required">
+                                                        <input  type="text" onChange={(e) => setSinguser(e.target.value)} value={singuser} id="userloginform-phonenumber" className="form-control input" name="UserLoginForm[phoneNumber]" dir="ltr" aria-required="true" />
                                                     </div>                </div>
-                                                <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12 sa_forms_notes"></div>
+                                                <div className="col-lg-4 col-md-3 col-sm-12 col-xs-12 sa_forms_notes"></div>
                                             </div>
-                                            <div class="row">
-                                                <div class="row">
-                                                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 sa_forms_titles">البريد الالكتروني: </div>
-                                                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                                            <div className="row">
+                                                <div className="row">
+                                                    <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12 sa_forms_titles">البريد الالكتروني: </div>
+                                                    <div className="col-lg-5 col-md-5 col-sm-12 col-xs-12">
 
-                                                        <div class="form-group field-userloginform-phonenumber required">
-                                                            <input class="input" type="text" onChange={(e) => setemail(e.target.value)} value={email} id="userloginform-phonenumber" class="form-control" name="UserLoginForm[phoneNumber]" dir="ltr" aria-required="true" />
+                                                        <div className="form-group field-userloginform-phonenumber required">
+                                                            <input type="text" onChange={(e) => setemail(e.target.value)} value={email} id="userloginform-phonenumber" className="input form-control" name="UserLoginForm[phoneNumber]" dir="ltr" aria-required="true" />
                                                         </div>                </div>
                                                     
-                                                    <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12 sa_forms_notes"></div>
+                                                    <div className="col-lg-4 col-md-3 col-sm-12 col-xs-12 sa_forms_notes"></div>
 
 
-                                                    <div class='row' style={{ width: '495px' }}>
-                                                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 sa_forms_titles">كلمة السر: </div>
-                                                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-                                                            <div class="input_elements clearfix">
+                                                    <div className='row' style={{ width: '495px' }}>
+                                                        <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12 sa_forms_titles">كلمة السر: </div>
+                                                        <div className="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                                                            <div className="input_elements clearfix">
 
-                                                                <div style={{ width: '480px' }} class="form-group field-userloginform-password required">
-                                                                    <input style={{ width: '473px' }}   class="input" type="password" onChange={(e) => setPassword(e.target.value)} value={password} id="userloginform-password" class="form-control" name="UserLoginForm[password]" dir="ltr" aria-required="true" />
-                                                                </div>                    <div class="input_elements_lft">
-                                                                    <button type="button" class="show_password" id="peye"></button>
+                                                                <div style={{ width: '480px' }} className="form-group field-userloginform-password required">
+                                                                    <input style={{ width: '473px' }}    type="password" onChange={(e) => setPassword(e.target.value)} value={password} id="userloginform-password" className="form-control input" name="UserLoginForm[password]" dir="ltr" aria-required="true" />
+                                                                </div>                    <div className="input_elements_lft">
+                                                                    <button type="button" className="show_password" id="peye"></button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -491,28 +491,28 @@ pauseOnHover
 
 
 
-                                            <div class="row">
-                                                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 sa_forms_titles"></div>
-                                                <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                                            <div className="row">
+                                                <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12 sa_forms_titles"></div>
+                                                <div className="col-lg-5 col-md-5 col-sm-12 col-xs-12">
 
                                                 </div>
-                                                <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12 sa_forms_notes"></div>
+                                                <div className="col-lg-4 col-md-3 col-sm-12 col-xs-12 sa_forms_notes"></div>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 sa_forms_titles"></div>
-                                                <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-                                                    <p class="sa_forms_btns">
-                                                        <label class="clearfix">
-                                                            <a href="" class=""> <button style={{transform: "translate(20px,-25px)"}} type="submit" class="btn btn-primary">سجل الآن </button>   </a></label>
+                                            <div className="row">
+                                                <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12 sa_forms_titles"></div>
+                                                <div className="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                                                    <p className="sa_forms_btns">
+                                                        <label className="clearfix">
+                                                            <a href="" className=""> <button style={{transform: "translate(20px,-25px)"}} type="submit" className="btn btn-primary">سجل الآن </button>   </a></label>
                                                     </p>
                                                 </div>
-                                                <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12 sa_forms_notes"></div>
+                                                <div className="col-lg-4 col-md-3 col-sm-12 col-xs-12 sa_forms_notes"></div>
                                             </div>
                                         </form>    </div>
 
                                 </div>
-                                {/* <div class="help_box">
-                                        <a onclick="PushDataLayer('communication.contact','Communication', 'Contact', 'Phone');" href="" class="btn">اتصل بنا للمساعدة</a>
+                                {/* <div className="help_box">
+                                        <a onclick="PushDataLayer('communication.contact','Communication', 'Contact', 'Phone');" href="" className="btn">اتصل بنا للمساعدة</a>
 
                                     </div> */}
 

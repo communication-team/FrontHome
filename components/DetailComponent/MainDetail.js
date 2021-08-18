@@ -42,9 +42,9 @@ export default function MainDetail(props){
 
     return(
       <React.Fragment>
-        <main class="PBT ">
-          <div class="postViewContainer">
-            <div class="container postMainColumns">
+        <main className="PBT ">
+          <div className="postViewContainer">
+            <div className="container postMainColumns">
               <CarCard info={info}/> 
             </div>
           </div>

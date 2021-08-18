@@ -26,14 +26,17 @@ export default function HeaderUsed (props) {
     window.location='/'
   }
     return(
-        <header class="siteHeader " style={{margin:"0"}}>
-            <div class="container innerHdr">
+        <header className="siteHeader " style={{margin:"0"}}>
+            <div className="container innerHdr">
                {/* <span><a href="/" ><img src="https://syarahcdn.syarah.com/syarah/bundles/logo.svg" alt="" /></a></span> */}
                <span>
-                   <a href="/" >
+               <Link href="/">
+                   <a  >
                    <img style={{width:'80px'}} src="https://firebasestorage.googleapis.com/v0/b/cars-8ba21.appspot.com/o/sayartakLogo.PNG?alt=media&token=82f9304a-2846-48c4-a791-3edaefc825f8" alt="" />
                    {/* <Image id='imageLogo'  src={Logo} alt="audi_Container1" /> */}
-                    </a></span>
+                    </a>
+                    
+                    </Link></span>
                 {/* for logo  */}
                 <ul>
                     <li>
@@ -51,20 +54,31 @@ export default function HeaderUsed (props) {
                         <a>سيارات مستعملة </a>
                         </Link>
                     </li>
-                    <li class="sellCarNewBtn hideBtn">
-                        <a href="/create_post" class="redBtn">اعرض سيارتك للبيع</a>
+                    <li className="sellCarNewBtn hideBtn">
+
+                    <Link href="/create_post" className="redBtn">
+                        <a className="redBtn">اعرض سيارتك للبيع</a>
+                        </Link>
                     </li>
                     {
-                        info==''? <li class="sellCarNewBtn hideBtn"><a href="/login" class="redBtn">
+                        info==''? <li className="sellCarNewBtn hideBtn">
+                            
+                            <Link href="/login" className="redBtn">
+                            <a className="redBtn">
                         تسجيل دخول 
                         </a>
-                        </li>: <li class="sellCarNewBtn hideBtn" onClick={logout}>
-                            <a href="/" class="redBtn" style={{textAlign: 'center'}}>
-                    <i class="fas fa-user" id='userIcone'></i>
+                        </Link>
+                        </li>: <li className="sellCarNewBtn hideBtn" onClick={logout}>
+
+                            
+                            <Link href="/" className="redBtn" style={{textAlign: 'center'}}>
+                            <a className="redBtn">
+                    <i className="fas fa-user" id='userIcone'></i>
                         {info}
                         <br/>
                         تسجيل الخروج
                         </a>
+                        </Link>
                     </li>
 
                     }
@@ -74,41 +88,5 @@ export default function HeaderUsed (props) {
             </div>
         </header>
     );
-    // return(
-    //     <header class="siteHeader ">
-    //         <div class="container innerHdr">
-    //            <span><a href="/"><img src="logo.png" alt="" /></a></span>
-    //             {/* for logo  */}
-    //             <ul>
-    //                 <li>
-    //                 <Link href="/">
-    //                     <a>الصفحة الرئيسية </a>
-    //                 </Link>
-    //                 </li>
-    //                 <li>
-    //                     <Link href='/forsellnew'>
-    //                     <a>سيارات جديدة </a>
-    //                     </Link>
-    //                 </li>
-    //                 <li>
-    //                     <Link href="/forsellused">
-    //                     <a>سيارات مستعملة </a>
-    //                     </Link>
-    //                 </li>
-    //                 <li class="sellCarNewBtn hideBtn">
-    //                     <a href="/create_post" class="redBtn">اعرض سيارتك للبيع</a>
-    //                 </li>
-    //                 <li class="sellCarNewBtn hideBtn"><a href="/login" class="redBtn">
-    //                 <i class="fas fa-user" id='userIcone'></i>
-    //                     اسم المتسخدم 
-    //                     </a>
-    //                 </li>
-    //                 <li class="sellCarNewBtn hideBtn"><a href="/login" class="redBtn">
-    //                     تسجيل دخول 
-    //                     </a>
-    //                     </li>
-    //                 </ul>
-    //         </div>
-    //     </header>
-    // );
+ 
 }

@@ -130,7 +130,7 @@ export default function Head2(props){
         {/* <link href="https://fonts.googleapis.com/css?family=Cairo:400,700,900" rel="stylessheet" /> */}
         <script type="text/jsx" async="" src="https://www.googletagservices.com/tag/js/gpt.js"> </script>
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
         <link href="https://fonts.googleapis.com/css2?family=Changa&display=swap" rel="stylesheet"/>
             {script1()}
         <script></script>
@@ -150,7 +150,7 @@ export default function Head2(props){
         src="https://www.facebook.com/tr?id=1669715986469750&ev=PageView&noscript=1"
         /></noscript>
         <link rel="stylessheet" href="static/css/client.791f187b.css"/>
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossOrigin="anonymous"/>
         <script>{script6()}</script>
         <script src="/static/js/client.ab5fdfe5.js?v=1.2" defer></script> 
     </Head>

@@ -11,8 +11,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 export default function CreatePost() {
   const notifyError = () => 
-     toast.error("Your Data Has Not Been Saved Try Later ! ", {
-    position: "top-right",
+     toast.error("لم يتم حفظ البيانات ! ", {
+    position: "bottom-right",
     autoClose: 5000,
     hideProgressBar: true,
     closeOnClick: true,
@@ -23,8 +23,8 @@ export default function CreatePost() {
   const notifysuccess = () =>
     
 
-    toast.success("Your Data Has Been Saved  ! ", {
-    position: "top-right",
+    toast.success("تك حفظ بيانات بنجاح ", {
+    position: "bottom-right",
     autoClose: 5000,
     hideProgressBar: true,
     closeOnClick: true,
@@ -261,7 +261,7 @@ async function onImgChangePrimary(e)
     
 <React.Fragment>
 <ToastContainer
-position="top-right"
+position="bottom-right"
 autoClose={5000}
 hideProgressBar={false}
 newestOnTop={false}

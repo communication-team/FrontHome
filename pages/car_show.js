@@ -3,12 +3,13 @@ import React from "react"
 
 
 import {useState,useEffect} from "react";
-
+import Header from '../components/Headershow'
 import { useRouter } from 'next/router'
-import Header from '../components/Header'
+
 import carspec from '../components/ojects'
 
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Car_Show() {
     
@@ -16,27 +17,44 @@ export default function Car_Show() {
     const [count, setCount] = useState(0);
     const [colorprice,setColorPrice]=useState(0)
     const [sticprice,setsticPrice]=useState(0)
-    // const [totle,setTotle]=useState(carspec[router.query.id].price)
+    const [totle,setTotle]=useState(router.query.id!=undefined && router.query.id!=null?carspec[router.query.id].price:0)
    
-    const [totle,setTotle]=useState(0)
-    const [number,setNumber]=useState(0)
+    // const [totle,setTotle]=useState(0)
+    const [number,setNumber]=useState(router.query.id!=undefined && router.query.id!=null?router.query.id:0)
     var size=25;
     var postionX=50;
     var postionY=50;
     console.log('ffff',router.query.id);
+
+
+    const notifysuccess = () =>
+    
+
+    toast.success("تم حفظ البيانات وسيتم التواصل معك  ", {
+    position: "bottom-right",
+    autoClose: 5000,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    });
+
     useEffect(() => {
         var rad = document.querySelectorAll('.cube input');
         var prev = null;
 
 
-            
-        if(router.query.id!=undefined || router.query.id!=null)
-        {
-            setNumber(router.query.id)
+            console.log('ggggggggggggg',number,totle)
+        // if(router.query.id!=undefined && router.query.id!=null  )
+        // {
+           
+        //     setNumber(router.query.id)
     
-            setTotle(carspec[router.query.id].price)
+        //     setTotle(carspec[router.query.id].price)
+        //     // router.query.id=null
         
-        }
+        // }
   
 
 
@@ -71,7 +89,7 @@ export default function Car_Show() {
         }
         
 
-      });
+    });
 
 
 
@@ -160,10 +178,22 @@ export default function Car_Show() {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossOrigin="anonymous"/>
     <link rel="stylesheet" href="assets/css/app.css"/>
 </head>
+
 <body style={{direction: 'rtl'}}>
+<ToastContainer
+position="bottom-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+/>
             <Header/>
 
-    <section id="car-detail" style={{direction: 'ltr'}}>
+    <section id="car-detail" style={{direction: 'ltr',    margin: '3%'}}>
         <div className="container">
             <div className="row">
                 
@@ -175,21 +205,23 @@ export default function Car_Show() {
                             <div className="car-preview" style={{backgroundImage:"url(" + "./assets/images/cars/" + carspec[number].slug+ "-side.png" + ")" }} ></div>
                         </div>
                         <div className="preview-buttons">
-                            <button onClick={prevSticker}><i className="fas fa-chevron-left"></i></button>
-                            <button onClick={nextSticker}><i className="fas fa-chevron-right"></i></button>
+                            <button  style={{    width: '5%'}} onClick={prevSticker}><i className="fas fa-chevron-left"></i></button>
+                            <button style={{    width: '5%'}} onClick={nextSticker}><i className="fas fa-chevron-right"></i></button>
                         </div>
                         <div className="sticker-editor d-flex">
-                            <div className="text-center">
-                                <button onClick={stickerUp}><i className="fas fa-arrow-up"></i></button>
+                            <div className="text-center" style={{display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center'}}>
+                                <button onClick={stickerUp} style={{    width: '25%'}}><i className="fas fa-arrow-up"></i></button>
                                 <div className="d-flex align-items-center">
-                                    <button onClick={stickerLeft}><i className="fas fa-arrow-left"></i></button>
-                                    <button  id="changeSticker" style={{backgroundImage:"url(" + "./assets/images/stickers/graffit" + stickerNo +".png" + ")" }} ></button>
-                                    <button onClick={stickerRight}><i className="fas fa-arrow-right"></i></button>
+                                    <button onClick={stickerLeft} style={{    width: '41%'}}><i className="fas fa-arrow-left"></i></button>
+                                    <button  id="changeSticker" style={{width: '136px',backgroundImage:"url(" + "./assets/images/stickers/graffit" + stickerNo +".png" + ")" }} ></button>
+                                    <button onClick={stickerRight} style={{    width: '41%'}}><i className="fas fa-arrow-right"></i></button>
                                 </div>
-                                <button onClick={stickerDown} ><i className="fas fa-arrow-down"></i></button>
+                                <button onClick={stickerDown} style={{    width: '25%'}}><i className="fas fa-arrow-down"></i></button>
                             </div>
-                            <div>
-                                <button onClick={sizeUp} className="btn btn-floating"><i className="fas fa-plus"></i></button>
+                            <div style={{    marginLeft: '27%'}}>
+                                <button  onClick={sizeUp} className="btn btn-floating"><i className="fas fa-plus"></i></button>
                                 <button onClick={sizedown} className="btn btn-floating"><i className="fas fa-minus"></i></button>
                             </div>
                         </div>
@@ -240,7 +272,7 @@ export default function Car_Show() {
                         <p className="d-flex justify-content-between mb-2">المجموع</p>
                         <h2 >{totle+' دينار'}</h2>
                         <div className="d-flex justify-content-end">
-                            <button type="submit" className="btn">اشتري</button>
+                            <button onClick={notifysuccess} type="submit" className="btn">اشتري</button>
                         </div>
                     </div>
 

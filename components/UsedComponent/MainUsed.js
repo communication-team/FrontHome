@@ -751,7 +751,10 @@ function toggaleImage(data)
                     </button></section>
                     </section>
                        </form>
-                    <section class="filterFooter"><button class="showResults blueBtn"><strong>أظهر النتائج</strong>
+                    <section class="filterFooter" style={{position: 'absolute',
+    bottom: '0',
+    width: '100%'
+}}><button class="showResults blueBtn"><strong>أظهر النتائج</strong>
                         <div><span>{post.length}</span><span>سيارة</span><img
                             src="https://syarahcdn.syarah.com/syarah/bundles/arrShow.svg" alt="" /></div>
                     </button></section>

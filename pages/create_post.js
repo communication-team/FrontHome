@@ -101,7 +101,7 @@ if(!window.localStorage.info)
         formData.append("transmission", tra);
         formData.append("cylinder", cy);
         formData.append("engine_size", cc);
-        formData.append("status", stat);
+        formData.append("status", 'مستعمل');
         formData.append("documents", trkh);
         formData.append("insurance", insure);
         formData.append("km", km);
@@ -126,9 +126,14 @@ if(!window.localStorage.info)
 
         axios.post('https://carsgallary.herokuapp.com/api/v1/cars/carinfo/create/', formData, config
         ).then(function (response) {
-
+if(response.data!="dddd.data")
+{
           notifysuccess()
+          
             console.log(response)
+}else{
+  alert('dddd')
+}
             
         }).catch(function (error) {
           notifyError()
@@ -177,6 +182,7 @@ if(!window.localStorage.info)
 async function onImgChangePrimary(e)
     {
         const file = e.target.files[0];
+        if(!file) return;
         const storageRef = app.storage().ref();
         const fileRef = storageRef.child(file.name);
         await fileRef.put(file);
@@ -193,6 +199,7 @@ async function onImgChangePrimary(e)
         
         // setImage1(event.target.files[0])
         const file = e.target.files[0];
+        if(!file) return;
         const storageRef = app.storage().ref();
         const fileRef = storageRef.child(file.name);
         await fileRef.put(file);
@@ -209,6 +216,7 @@ async function onImgChangePrimary(e)
     {
         
         const file = e.target.files[0];
+        if(!file) return;
         const storageRef = app.storage().ref();
         const fileRef = storageRef.child(file.name);
         await fileRef.put(file);
@@ -224,6 +232,7 @@ async function onImgChangePrimary(e)
     async   function onImgChange3(e)
     {
         const file = e.target.files[0];
+        if(!file) return;
         const storageRef = app.storage().ref();
         const fileRef = storageRef.child(file.name);
         await fileRef.put(file);
@@ -238,7 +247,9 @@ async function onImgChangePrimary(e)
     }
     async  function onImgChange4(e)
     {
+     
         const file = e.target.files[0];
+        if(!file) return;
         const storageRef = app.storage().ref();
         const fileRef = storageRef.child(file.name);
         await fileRef.put(file);
@@ -387,13 +398,13 @@ pauseOnHover
     <input type="text" id="fuel" name="fuel" placeholder="بنزين ولا سولار .." onChange={(e)=>setFule(e.target.value)} value={fule}/>
     <label for="engine"> سعة المحرك</label>
     <input type="number" id="engine" name="engine" placeholder="2000 cc .." onChange={(e)=>setCc(e.target.value)} value={cc} />
-    <label for="status"> الحالة</label>
-    <select id="brand" name="الحالة" onChange={(e)=>setStat(e.target.value)} >
+    {/* <label for="status"> الحالة</label> */}
+    {/* <select id="brand" name="الحالة" onChange={(e)=>setStat(e.target.value)} >
       <option value="جديد  "> جديد</option>
       <option value="مستعمل">مستعمل</option>
 
 
-    </select>
+    </select> */}
     <label for="Insurance"> التامين</label>
    
     <select id="brand" name="التامين" onChange={(e)=>setInsure(e.target.value)}>

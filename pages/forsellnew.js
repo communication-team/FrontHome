@@ -57,17 +57,17 @@ export default function ForSellNew() {
         </header>
                  {/* <Header/> */}
             <section id="intro">
-                <h2>welcome TO</h2>
-                <h1>HOT WHEELS</h1>
+                <h2>اهلا بك في</h2>
+                <h1>سيارتك</h1>
                 <div class="car-intro">
                     <img class="back-wheel" src="assets/images/wheel-back.png" alt=""/>
                     <img class="front-wheel" src="assets/images/wheel-back.png" alt=""/>
                 </div>
-                <a class="btn" href="#market" type="submit">JOIN US</a>
+                <a class="btn" href="#market" type="submit">انضم الينا</a>
             </section>
             <section id="market">
                 <div class="container">
-                    <h1>MARKET PLACE</h1>
+                    <h1>اختر سيارتك الجديدة </h1>
                     <div class="row">
                     {carspec.map((car,index) => (
                         <div class="col-12 col-sm-6 col-lg-4">
@@ -79,7 +79,7 @@ export default function ForSellNew() {
                                 {/* <Link href={"/car_show?"+index} params={{id:index}}> */}
                                 <Link  href={{ pathname: "/car_show", query: { id: index } }}>
 
-                                <a class="market-buy btn" href="/car_show">View vehicle</a>
+                                <a class="market-buy btn" href="/car_show">شاهد سيارة</a>
                                 </Link>
                             </div>
                         </div>

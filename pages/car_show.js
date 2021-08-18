@@ -53,7 +53,7 @@ export default function Car_Show() {
                 // if(carspec[router.query.id].price >=totle)
                 console.log(sticprice+ carspec[router.query.id].price+ 500)
                 setTotle(sticprice+ carspec[router.query.id].price+ 500)
-                setColorPrice(300)
+                setColorPrice(500)
        
 
             });
@@ -107,18 +107,20 @@ export default function Car_Show() {
         var sticker =document.querySelector('.car-sticker')
         sticker.style.backgroundPosition = postionX +"% " + postionY +"%";
         sticker.style.backgroundSize = size +"%";
-        console.log(colorprice+ carspec[router.query.id].price+ 300)
-        setTotle(colorprice+ carspec[router.query.id].price+ 300)
-        setsticPrice(300)
+       
     }
     let [stickerNo, setStickerNo] = useState(0);
 
     function nextSticker(){
+
         if(stickerNo < 17){
             setStickerNo(stickerNo+1)
         }else{
             setStickerNo(0)
         }
+        console.log(colorprice+' '+ carspec[router.query.id].price)
+        setTotle(colorprice+ carspec[router.query.id].price+ 300)
+        setsticPrice(300)
     }
     function prevSticker(){
         if(stickerNo > 1){
@@ -126,6 +128,9 @@ export default function Car_Show() {
         }else{
             setStickerNo(17)
         }
+        console.log(colorprice+' '+ carspec[router.query.id].price)
+        setTotle(colorprice+ carspec[router.query.id].price+ 300)
+        setsticPrice(300)
     }
 
     return (
@@ -218,23 +223,23 @@ export default function Car_Show() {
                     <h1>{carspec[router.query.id].name}</h1>
 
                     <div>
-                        <small><b>Year</b></small>
+                        <small><b>سنة الصنع</b></small>
                         <p>{carspec[router.query.id].model}</p>
                     </div>
 
                     <div>
-                        <small><b>Engine size</b></small>
-                        <p>2000CC</p>
+                        <small><b>سعة المحرك</b></small>
+                        <p>{carspec[router.query.id].engine}</p>
                     </div>
 
                     <div>
-                        <small><b>Fuel</b></small>
-                        <p>gas</p>
+                        <small><b>عدد الاحصنة</b></small>
+                        <p>{carspec[router.query.id].hourcePower}</p>
                     </div>
 
                     <div>
-                        <small><b>Passnger</b></small>
-                        <p>4 People</p>
+                        <small><b>عدد الركاب</b></small>
+                        <p>اربعة اشخاص </p>
                     </div>
                     
                     <div class="car-price border p-3">
@@ -245,7 +250,7 @@ export default function Car_Show() {
                         <p class="d-flex justify-content-between mb-2">المجموع</p>
                         <h2 >{totle+' دينار'}</h2>
                         <div class="d-flex justify-content-end">
-                            <button type="submit" class="btn">CHECKOUT</button>
+                            <button type="submit" class="btn">اشتري</button>
                         </div>
                     </div>
 

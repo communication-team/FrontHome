@@ -3,7 +3,7 @@ import React from "react"
 import Link from 'next/link'
 import Header from '../components/Header'
 import carspec from '../components/ojects'
-
+import Footer from '../components/Footer'
 export default function ForSellNew() {
     
 
@@ -20,10 +20,14 @@ export default function ForSellNew() {
             <title>Document</title>
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossOrigin="anonymous"/>
             <link rel="stylesheet" href="assets/css/app.css"/>
+            <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Changa&display=swap" rel="stylesheet"/>
         </head>
         <body style={{direction: 'rtl'}}>
+            <div id='HeaderNeedSpace'>
             <Header/>
-          
+            </div>
             <section id="intro">
                 <h2>اهلا بك في</h2>
                 <h1>سيارتك</h1>
@@ -31,9 +35,9 @@ export default function ForSellNew() {
                     <img className="back-wheel" src="assets/images/wheel-back.png" alt=""/>
                     <img className="front-wheel" src="assets/images/wheel-back.png" alt=""/>
                 </div>
-                <Link href="/login">
+                {/* <Link href="/login">
                 <a className="btn" href="#market" type="submit">انضم الينا</a>
-                </Link>
+                </Link> */}
             </section>
             <section id="market">
                 <div className="container">
@@ -58,46 +62,9 @@ export default function ForSellNew() {
                 </div>
             </section>
 
-            <footer className="footer">
-            <div className="container">
-              
-                <div className="dataFooterContent">
-                    {/* <div> */}
-                        <ul>
-                            <li>
-                                <strong>
-                                    <Link href="/">
-                                    <a >الرئيسية</a>
-                                    </Link>
-                                </strong>
-                            </li>
-                            <li>
-                            <strong>
-                                  <Link href="/">
-                                <a >من نحن</a>
-                                </Link>
-                            </strong>
-                            </li>
-                            <li>
-                                <strong>
-                                    <Link href="https://api.whatsapp.com/send/?phone=%2B962796207201&text&app_absent=0" passHref={true}> 
-                                     <a >اتصل بنا</a>
-                                    </Link>
-                                </strong>
-                            </li>
-                         
-                        </ul>
-                   
-                            <p>
-                                <strong>
-                                جميع الحقوق محفوظة
-                                </strong>
-                                 </p>
-                    {/* </div> */}
-                </div>
+            <div id='footerNeedPadding'>
+                        <Footer/>
             </div>
-               
-            </footer>
 {/* 
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossOrigin="anonymous"></script>
             <script src="./assets/js/app.js"></script> */}

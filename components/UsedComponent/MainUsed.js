@@ -798,7 +798,7 @@ return (
                             backgroundColor: 'transparent',
                             fontSize: 'revert',
                             right: '49%',
-                            top:'48%'}}>ناسف لعدم وجود نتائج مطابقه لخيارات البحث ! </h1>}
+                            top:'48%'}}>جاري تحميل البيانات  </h1>}
 
                         
                         {/*

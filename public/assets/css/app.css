@@ -780,7 +780,7 @@ button:hover {
 html{font-family: 'Changa', sans-serif;; -ms-text-size-adjust:100%;-webkit-text-size-adjust:100%; -webkit-tap-highlight-color:rgba(0,0,0,0)}
 body{background: #ffffff; margin:0; padding:0; font-size:14px; line-height:1.42857143; color:#272b33; position:relative; }
 a:link{ color:#0049b0; outline:0; text-decoration:none;}
-a:hover,a:visited{ color:#2d3e50; outline:0; text-decoration:none;}
+a:hover,a:visited{ color:#0049b0; outline:0; text-decoration:none;}
 h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-family: 'Changa', sans-serif;font-weight:500;line-height:1.1;color:#272b33; font-size:65%}
 h1{font-size:1.5em; margin:0 0}
 h2{font-size:18px}

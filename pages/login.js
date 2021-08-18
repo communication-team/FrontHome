@@ -47,7 +47,6 @@ export default function Login() {
                 setInfo(response.data)
             })
             .catch(function (error) {
-                // handle error
                 console.log('ffff', error);
 
             })
